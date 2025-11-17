@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vitara Gaia House | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              jade: "#0D0D0B",
+              champagne: "#D8C7A2",
+              ivory: "#F4F1EA",
+              earth: "#B8AFA3",
+              shadow: "#3A332E",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        background-color: #0f0f0e;
+        color: #f4f1ea;
+      }
+      .font-display {
+        font-family: "Playfair Display", "Times New Roman", serif;
+      }
+      .nav-link {
+        @apply text-sm tracking-[0.16em] uppercase;
+      }
+    </style>
+  </head>
+
+  <body class="bg-jade text-ivory antialiased">
+    <!-- Page Wrapper -->
+    <div class="min-h-screen flex flex-col">
+      <!-- NAVBAR -->
+      <header
+        class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
+      >
+        <div class="mx-auto max-w-6xl px-5">
+          <div class="flex items-center justify-between h-16">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center gap-3">
+              <div
+                class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
+              >
+                VG
+              </div>
+              <span
+                class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
+              >
+                Vitara Gaia House
+              </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav
+              class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
+            >
+              <a
+                href="the-house.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >The House</a
+              >
+              <a
+                href="membership.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >Membership</a
+              >
+              <a
+                href="house-rituals.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >House Rituals</a
+              >
+              <a
+                href="culinary-salon.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >Culinary Salon</a
+              >
+              <a
+                href="method.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >Method</a
+              >
+              <a
+                href="journal.html"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                >Journal</a
+              >
+              <a
+                href="private-inquiry.html"
+                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
+              >
+                Private Inquiry
+              </a>
+            </nav>
+
+            <!-- Mobile burger (non-functional placeholder; you can wire JS later if needed) -->
+            <button
+              class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
+              aria-label="Open navigation"
+            >
+              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+              <span class="block h-[1px] w-4 bg-ivory"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="flex-1 pt-16">
+        <section class="py-20">
+          <div class="mx-auto max-w-3xl px-5 space-y-10">
+            <header class="space-y-4">
+              <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
+                Private Inquiry
+              </p>
+              <h1 class="font-display text-3xl md:text-4xl">
+                Submit a confidential inquiry to Vitara Gaia House.
+              </h1>
+              <p class="text-sm text-ivory/75">
+                Vitara Gaia House is a private integrative wellness house. If
+                you feel called to this work, you may submit a confidential
+                inquiry regarding membership or collaboration.
+              </p>
+            </header>
+
+            <form class="space-y-5">
+              <div>
+                <label
+                  class="block text-xs tracking-[0.18em] uppercase text-ivory/60 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs tracking-[0.18em] uppercase text-ivory/60 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs tracking-[0.18em] uppercase text-ivory/60 mb-1"
+                  >Phone (optional)</label
+                >
+                <input
+                  type="tel"
+                  class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
+                  placeholder="+1 ..."
+                />
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs tracking-[0.18em] uppercase text-ivory/60 mb-1"
+                >
+                  How may the House support you?
+                </label>
+                <textarea
+                  rows="5"
+                  class="w-full rounded-3xl border border-white/15 bg-black/40 px-4 py-3 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
+                  placeholder="Share anything you wish about your intentions, needs, or timing."
+                ></textarea>
+              </div>
+
+              <div class="flex items-center gap-2 text-xs text-ivory/70">
+                <input
+                  type="checkbox"
+                  id="membership"
+                  class="h-3 w-3 rounded border-white/40 bg-black/40"
+                />
+                <label for="membership"
+                  >I am requesting membership consideration.</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="mt-4 inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+              >
+                Submit Confidential Inquiry
+              </button>
+
+              <p class="text-[11px] text-ivory/50 pt-3">
+                This form is for initial contact only. No medical information
+                should be submitted here.
+              </p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-white/5 mt-16">
+        <div
+          class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+        >
+          <p class="text-xs text-ivory/50">
+            © <span id="year"></span> Vitara Gaia House · Private Integrative
+            Wellness House
+          </p>
+          <div
+            class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
+          >
+            <a href="membership.html" class="hover:text-ivory transition-colors"
+              >Membership</a
+            >
+            <a
+              href="private-inquiry.html"
+              class="hover:text-ivory transition-colors"
+              >Request Access</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
