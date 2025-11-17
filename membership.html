@@ -49,21 +49,15 @@
       .nav-link {
         @apply text-sm tracking-[0.16em] uppercase;
       }
-      .card-frame {
-        @apply border border-white/10 rounded-2xl bg-white/5 overflow-hidden;
-      }
-      .dark-overlay {
-        background: linear-gradient(
-          to bottom,
-          rgba(15, 15, 14, 0) 0%,
-          rgba(15, 15, 14, 0.6) 90%
-        );
+
+      /* Global image treatment */
+      .filtered-img {
+        filter: brightness(0.82) contrast(1.08) saturate(1.12);
       }
     </style>
   </head>
 
   <body class="bg-jade text-ivory antialiased">
-    <!-- Page Wrapper -->
     <div class="min-h-screen flex flex-col">
       <!-- NAVBAR -->
       <header
@@ -91,46 +85,45 @@
             >
               <a
                 href="the-house.html"
-                class="nav-link text-ivory/60 hover:text-ivory"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
                 >The House</a
               >
               <a
                 href="membership.html"
-                class="nav-link text-ivory hover:text-ivory"
+                class="nav-link text-ivory hover:text-ivory transition-colors"
                 >Membership</a
               >
               <a
                 href="house-rituals.html"
-                class="nav-link text-ivory/60 hover:text-ivory"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
                 >House Rituals</a
               >
               <a
                 href="culinary-salon.html"
-                class="nav-link text-ivory/60 hover:text-ivory"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
                 >Culinary Salon</a
               >
               <a
                 href="method.html"
-                class="nav-link text-ivory/60 hover:text-ivory"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
                 >Method</a
               >
               <a
                 href="journal.html"
-                class="nav-link text-ivory/60 hover:text-ivory"
+                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
                 >Journal</a
               >
               <a
                 href="private-inquiry.html"
-                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition"
+                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
               >
                 Private Inquiry
               </a>
             </nav>
 
-            <!-- Mobile menu icon (optional JS to activate later) -->
+            <!-- Mobile Menu Placeholder -->
             <button
               class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-              aria-label="Open navigation"
             >
               <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
               <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
@@ -141,62 +134,50 @@
       </header>
 
       <!-- MAIN CONTENT -->
-      <main class="flex-1 pt-16">
-        <!-- TOP HERO -->
-        <section class="relative h-[75vh] w-full overflow-hidden">
-          <img
-            src="assets/images/membership/membership-hero.jpg"
-            class="w-full h-full object-cover"
-            alt="Membership experience"
-          />
-          <div class="absolute inset-0 dark-overlay"></div>
-        </section>
-
-        <!-- MAIN TEXT + IMAGES -->
-        <section class="py-20">
-          <div class="mx-auto max-w-6xl px-5 space-y-14">
-            <!-- Header -->
-            <header class="space-y-4 max-w-3xl">
-              <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
-                Membership
-              </p>
-              <h1 class="font-display text-3xl md:text-4xl">
-                Membership at Vitara Gaia Wellness House is intentionally
-                limited and deeply personal.
-              </h1>
-              <p class="text-sm text-ivory/75">
-                Vitara Gaia Wellness House welcomes a limited number of members
-                each season. We prioritize depth, discretion, and continuity of
-                care over volume.
-              </p>
-            </header>
-
-            <!-- TWO CARD IMAGES -->
-            <div class="grid md:grid-cols-2 gap-8">
-              <!-- Massage -->
-              <div class="card-frame h-72">
+      <main class="flex-1 pt-20">
+        <!-- HERO WITH WHITE FRAME -->
+        <section class="pt-10 pb-16">
+          <div class="mx-auto max-w-5xl px-5">
+            <div
+              class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden"
+            >
+              <div class="relative h-[60vh] w-full">
                 <img
-                  src="assets/images/membership/membership-massage.jpg"
-                  class="w-full h-full object-cover"
-                  alt="Massage Ritual"
+                  src="assets/images/membership/membership-hero.jpg"
+                  class="w-full h-full object-cover filtered-img"
                 />
-              </div>
 
-              <!-- Relaxation Room -->
-              <div class="card-frame h-72">
-                <img
-                  src="assets/images/membership/membership-relaxation.jpg"
-                  class="w-full h-full object-cover"
-                  alt="Relaxation Room"
-                />
+                <div class="absolute inset-0 bg-black/40"></div>
+
+                <div
+                  class="absolute inset-0 flex items-center justify-center px-6 text-center"
+                >
+                  <div class="max-w-2xl space-y-4">
+                    <p
+                      class="text-[11px] tracking-[0.22em] uppercase text-ivory/60"
+                    >
+                      Membership
+                    </p>
+                    <h1 class="font-display text-4xl md:text-5xl leading-tight">
+                      Membership at Vitara Gaia Wellness House
+                    </h1>
+                    <p class="text-sm text-ivory/80 max-w-md mx-auto">
+                      A private, invitation-only pathway designed for depth,
+                      continuity, and integrative transformation.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <!-- TEXT GRID + SIDE TALL IMAGE -->
-            <div class="grid md:grid-cols-[1fr,0.8fr] gap-12 items-start">
-              <!-- Text section -->
-              <div class="space-y-10">
-                <!-- Who It's For -->
+        <!-- MAIN MEMBERSHIP CONTENT -->
+        <section class="pb-20">
+          <div class="mx-auto max-w-6xl px-5 space-y-16">
+            <div class="grid md:grid-cols-2 gap-10">
+              <!-- TEXT COLUMN -->
+              <div class="space-y-6 max-w-lg">
                 <div>
                   <h2 class="font-display text-xl mb-2">
                     Who the House Is For
@@ -217,7 +198,6 @@
                   </ul>
                 </div>
 
-                <!-- Privileges -->
                 <div>
                   <h2 class="font-display text-xl mb-2">
                     Membership Privileges
@@ -229,53 +209,74 @@
                       • Ongoing integrative oversight (TCM, functional, herbal,
                       peptide/hormone).
                     </li>
+                    <li>• Invitations to intimate salon evenings.</li>
+                    <li>• Access to Culinary Medicine experiences.</li>
                     <li>
-                      • Invitations to intimate salon evenings (tea, lectures,
-                      longevity talks).
-                    </li>
-                    <li>
-                      • Culinary Medicine experiences during immersions or
-                      retreats.
-                    </li>
-                    <li>
-                      • Ability to host a guest (with approval) for certain
-                      rituals.
+                      • Ability to host an approved guest for certain rituals.
                     </li>
                   </ul>
                 </div>
+              </div>
 
-                <!-- Pathway -->
-                <section class="card-frame p-6 space-y-4">
-                  <h2 class="font-display text-xl">Membership Pathway</h2>
-                  <ol
-                    class="space-y-2 text-sm text-ivory/80 list-decimal list-inside"
-                  >
-                    <li>Submit a private inquiry.</li>
-                    <li>Short conversation to align intentions and needs.</li>
-                    <li>If aligned, a membership outline is extended.</li>
-                    <li>Initiation through a first immersion at the House.</li>
-                  </ol>
-                </section>
+              <!-- RIGHT COLUMN: VERTICAL IMAGE -->
+              <div
+                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden h-[85vh]"
+              >
+                <img
+                  src="assets/images/membership/membership-window.jpg"
+                  class="w-full h-full object-cover filtered-img"
+                />
+              </div>
+            </div>
 
-                <!-- CTA -->
-                <div class="pt-2">
-                  <a
-                    href="private-inquiry.html"
-                    class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition"
-                  >
-                    Request Membership Consideration
-                  </a>
+            <!-- TWO IMAGE CARDS -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <div
+                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden"
+              >
+                <div class="h-72 w-full">
+                  <img
+                    src="assets/images/membership/membership-massage.jpg"
+                    class="w-full h-full object-cover filtered-img"
+                  />
                 </div>
               </div>
 
-              <!-- Tall Image -->
-              <div class="card-frame h-[85vh]">
-                <img
-                  src="assets/images/membership/membership-window.jpg"
-                  class="w-full h-full object-cover"
-                  alt="City View"
-                />
+              <div
+                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden"
+              >
+                <div class="h-72 w-full">
+                  <img
+                    src="assets/images/membership/membership-relaxation.jpg"
+                    class="w-full h-full object-cover filtered-img"
+                  />
+                </div>
               </div>
+            </div>
+
+            <!-- PATHWAY SECTION -->
+            <section
+              class="border border-white/10 rounded-2xl p-6 bg-white/5 space-y-4"
+            >
+              <h2 class="font-display text-xl">Membership Pathway</h2>
+              <ol
+                class="list-decimal list-inside space-y-2 text-sm text-ivory/80"
+              >
+                <li>Submit a private inquiry.</li>
+                <li>Short conversation to align intentions and needs.</li>
+                <li>If aligned, a membership outline is extended.</li>
+                <li>Initiation through a first immersion at the House.</li>
+              </ol>
+            </section>
+
+            <!-- CTA -->
+            <div>
+              <a
+                href="private-inquiry.html"
+                class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+              >
+                Request Membership Consideration
+              </a>
             </div>
           </div>
         </section>
@@ -293,8 +294,12 @@
           <div
             class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
           >
-            <a href="membership.html" class="hover:text-ivory">Membership</a>
-            <a href="private-inquiry.html" class="hover:text-ivory"
+            <a href="membership.html" class="hover:text-ivory transition-colors"
+              >Membership</a
+            >
+            <a
+              href="private-inquiry.html"
+              class="hover:text-ivory transition-colors"
               >Request Access</a
             >
           </div>
