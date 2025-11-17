@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
     <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
 
-    <title>Vitara Gaia House | Home</title>
+    <title>Vitara Gaia Wellness House | The House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Tailwind CDN -->
@@ -33,25 +33,49 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
     <style>
       body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: #0f0f0e;
         color: #f4f1ea;
       }
       .font-display {
-        font-family: "Playfair Display", "Times New Roman", serif;
+        font-family: "Playfair Display", serif;
       }
-      .nav-link {
-        @apply text-sm tracking-[0.16em] uppercase;
+
+      /* Dark filter like index */
+      .filtered-img {
+        filter: brightness(0.78) contrast(1.05) saturate(0.85);
+      }
+
+      /* White border frame */
+      .frame {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+
+      /* Collage slideshow styling */
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 420px;
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.6s ease-in-out;
+      }
+      .slide.active {
+        opacity: 1;
       }
     </style>
   </head>
 
   <body class="bg-jade text-ivory antialiased">
-    <!-- Page Wrapper -->
+    <!-- WRAPPER -->
     <div class="min-h-screen flex flex-col">
       <!-- NAVBAR -->
       <header
@@ -59,7 +83,7 @@
       >
         <div class="mx-auto max-w-6xl px-5">
           <div class="flex items-center justify-between h-16">
-            <!-- Brand -->
+            <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3">
               <div
                 class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
@@ -69,7 +93,7 @@
               <span
                 class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
               >
-                Vitara Gaia House
+                Vitara Gaia Wellness House
               </span>
             </a>
 
@@ -77,53 +101,33 @@
             <nav
               class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
             >
-              <a
-                href="the-house.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >The House</a
-              >
-              <a
-                href="membership.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="the-house.html" class="text-ivory">The House</a>
+              <a href="membership.html" class="text-ivory/60 hover:text-ivory"
                 >Membership</a
               >
               <a
                 href="house-rituals.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                class="text-ivory/60 hover:text-ivory"
                 >House Rituals</a
               >
               <a
                 href="culinary-salon.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                class="text-ivory/60 hover:text-ivory"
                 >Culinary Salon</a
               >
-              <a
-                href="method.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="method.html" class="text-ivory/60 hover:text-ivory"
                 >Method</a
               >
-              <a
-                href="journal.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="journal.html" class="text-ivory/60 hover:text-ivory"
                 >Journal</a
               >
               <a
                 href="private-inquiry.html"
-                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
+                class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
               >
                 Private Inquiry
               </a>
             </nav>
-
-            <!-- Mobile burger (non-functional placeholder; you can wire JS later if needed) -->
-            <button
-              class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-              aria-label="Open navigation"
-            >
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory"></span>
-            </button>
           </div>
         </div>
       </header>
@@ -138,86 +142,140 @@
               <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
                 The House
               </p>
+
               <h1 class="font-display text-3xl md:text-4xl">
-                Vitara Gaia House is a private integrative wellness residence.
+                Vitara Gaia Wellness House is a private integrative wellness
+                residence.
               </h1>
+
               <p class="text-sm text-ivory/75">
-                Situated in New York City, Vitara Gaia House is a quiet, curated
-                environment for those seeking longevity, detox, and
-                rehabilitation. It is not a public clinic—it is a house,
+                Situated in New York City, Vitara Gaia Wellness House is a
+                quiet, curated environment for those seeking longevity, detox,
+                and rehabilitation. It is not a public clinic— it is a house,
                 accessible only to members and their invited guests.
               </p>
+
               <p class="text-sm text-ivory/70">
                 The House is designed with in-residence intimacy: low daily
-                volume, extended time-blocks, and deeply considered sensory
-                cues. Members arrive to be received, not rushed. Every ritual is
-                staged as a private experience.
+                volume, extended sessions, and sensory cues crafted to settle
+                the nervous system. Members arrive to be received, not rushed.
               </p>
             </div>
 
+            <!-- RIGHT SIDE CARDS -->
             <div class="space-y-8">
-              <div
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
+              <!-- Card 1 -->
+              <div class="frame bg-white/5">
+                <div class="h-56 w-full">
                   <img
-                    src="assets/images/house/house-treatment-room.jpg"
+                    src="assets/images/house/house-atmosphere.jpg"
                     class="filtered-img w-full h-full object-cover"
                   />
                 </div>
                 <div class="p-5">
                   <h2 class="font-display text-xl mb-2">House Atmosphere</h2>
                   <p class="text-sm text-ivory/75">
-                    Penthouse stillness, townhouse warmth. Soft light, stone,
-                    and textiles that hold the nervous system.
-                  </p>
-                  <p class="text-sm text-ivory/70 mt-3">
-                    The House is intentionally low-traffic to preserve a sense
-                    of residence rather than rotation.
+                    Penthouse stillness, townhouse warmth — soft light, stone,
+                    aroma, and textiles that hold the nervous system.
                   </p>
                 </div>
               </div>
 
-              <div
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
+              <!-- Card 2 -->
+              <div class="frame bg-white/5">
+                <div class="h-56 w-full">
                   <img
-                    src="assets/images/house/house-relaxation-room.jpg"
+                    src="assets/images/house/house-relaxation.jpg"
                     class="filtered-img w-full h-full object-cover"
                   />
                 </div>
               </div>
 
-              <div
-                class="border border-white/8 rounded-2xl p-5 bg-white/5 flex gap-4"
-              >
+              <!-- Founder Card -->
+              <div class="frame bg-white/5 p-5 flex gap-4">
                 <div
                   class="h-20 w-20 rounded-full bg-white/10 overflow-hidden shrink-0"
                 >
-                  <!-- founder image -->
                   <img
-                    src="assets/images/vitara-gaia.png
-                    "
-                    alt="Dr. Karl Celestine"
+                    src="assets/images/vitara-gaia.png"
                     class="h-full w-full object-cover"
                   />
                 </div>
+
                 <div>
                   <p
-                    class="text-[11px] tracking-[0.22em] uppercase text-ivory/50 mb-1"
+                    class="text-[11px] tracking-[0.22em] uppercase text-ivory/50"
                   >
-                    House Founder &amp; Medical Director
+                    House Founder & Medical Director
                   </p>
                   <h3 class="font-display text-lg">Dr. Karl Celestine, DAOM</h3>
                   <p class="text-xs text-ivory/70 mt-1">
                     Doctor of Acupuncture and Oriental Medicine, integrative
-                    practitioner, and designer of the Vitara Gaia
-                    Method—bridging ritual medicine, clinical rigor, and modern
-                    hospitality.
+                    practitioner, and designer of the Vitara Gaia Method.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FULL-WIDTH ROTATING COLLAGE -->
+        <section class="mt-10">
+          <div class="slideshow-container">
+            <div class="slide active">
+              <img
+                src="assets/images/house/collage/collage-01.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-02.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-03.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-04.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-05.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-06.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-07.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-08.jpg"
+                class="filtered-img w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
@@ -229,18 +287,15 @@
           class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
         >
           <p class="text-xs text-ivory/50">
-            © <span id="year"></span> Vitara Gaia House · Private Integrative
-            Wellness House
+            © <span id="year"></span> Vitara Gaia Wellness House · Private
+            Integrative Wellness House
           </p>
+
           <div
             class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
           >
-            <a href="membership.html" class="hover:text-ivory transition-colors"
-              >Membership</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="hover:text-ivory transition-colors"
+            <a href="membership.html" class="hover:text-ivory">Membership</a>
+            <a href="private-inquiry.html" class="hover:text-ivory"
               >Request Access</a
             >
           </div>
@@ -250,6 +305,16 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // SIMPLE FADE SLIDESHOW
+      let index = 0;
+      const slides = document.querySelectorAll(".slide");
+
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }, 4000);
     </script>
   </body>
 </html>
