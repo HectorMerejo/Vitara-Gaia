@@ -96,3 +96,32 @@ body {
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(1px);
 }
+
+/* Frame style (already in use for cards) */
+.frame {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Slightly darker, moodier image treatment */
+.filtered-img {
+  filter: brightness(0.72) contrast(1.05) saturate(0.85);
+}
+
