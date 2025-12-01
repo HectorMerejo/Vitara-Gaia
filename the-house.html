@@ -2,9 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
-    <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
-
     <title>Vitara Gaia Wellness House | The House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,8 +15,10 @@
               jade: "#0D0D0B",
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
-              earth: "#B8AFA3",
-              shadow: "#3A332E",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
             },
           },
         },
@@ -36,26 +35,14 @@
 
     <style>
       body {
-        font-family: "Inter", sans-serif;
-        background-color: #0f0f0e;
+        background-color: #0d0d0b;
         color: #f4f1ea;
       }
-      .font-display {
-        font-family: "Playfair Display", serif;
-      }
+
       .filtered-img {
-        filter: brightness(0.78) contrast(1.1) saturate(1.1);
+        filter: brightness(0.78) contrast(1.05) saturate(0.85);
       }
-      .frame {
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 1.2rem;
-        overflow: hidden;
-      }
-      .slideshow-container {
-        position: relative;
-        width: 100%;
-        height: 420px;
-      }
+
       .slide {
         position: absolute;
         inset: 0;
@@ -67,242 +54,302 @@
       }
     </style>
   </head>
-
-  <body class="bg-jade text-ivory antialiased">
-    <div class="min-h-screen flex flex-col">
-      <!-- NAVBAR -->
-      <header
-        class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
-      >
-        <div class="mx-auto max-w-6xl px-5">
-          <div class="flex items-center justify-between h-16">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3">
-              <div
-                class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
-              >
-                VG
-              </div>
-              <span
-                class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
-              >
-                Vitara Gaia Wellness House
-              </span>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav
-              class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
-            >
-              <a
-                href="the-house.html"
-                class="text-ivory hover:text-ivory transition-colors"
-                >The House</a
-              >
-              <a
-                href="method.html"
-                class="text-ivory/60 hover:text-ivory transition-colors"
-                >Method</a
-              >
-              <a
-                href="membership.html"
-                class="text-ivory/60 hover:text-ivory transition-colors"
-                >Membership</a
-              >
-              <a
-                href="house-rituals.html"
-                class="text-ivory/60 hover:text-ivory transition-colors"
-                >House Rituals</a
-              >
-              <a
-                href="culinary-salon.html"
-                class="text-ivory/60 hover:text-ivory transition-colors"
-                >Culinary Salon</a
-              >
-              <a
-                href="journal.html"
-                class="text-ivory/60 hover:text-ivory transition-colors"
-                >Journal</a
-              >
-              <a
-                href="private-inquiry.html"
-                class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
-              >
-                Private Inquiry
-              </a>
-            </nav>
-
-            <!-- Mobile Menu Button Placeholder -->
-            <button
-              class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-            >
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory"></span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <!-- MAIN CONTENT -->
-      <main class="flex-1 pt-16">
-        <!-- HERO -->
-        <section class="pt-10 pb-16">
-          <div class="mx-auto max-w-7xl px-5">
+  <body class="font-body antialiased">
+    <!-- ================= NAVBAR (added here) ================= -->
+    <header
+      class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
+    >
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3">
             <div
-              class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden"
+              class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
             >
-              <div class="relative h-[65vh] w-full">
-                <img
-                  src="assets/images/the-house/house-hero.jpg"
-                  class="w-full h-full object-cover filtered-img"
-                />
-                <div class="absolute inset-0 bg-black/45"></div>
-
-                <div
-                  class="absolute inset-0 flex items-center justify-center px-8"
-                >
-                  <div class="max-w-2xl text-center space-y-4">
-                    <p
-                      class="text-[11px] tracking-[0.22em] uppercase text-ivory/60"
-                    >
-                      The House
-                    </p>
-                    <h1 class="font-display text-4xl md:text-5xl leading-tight">
-                      A Private Integrative Wellness Sanctuary
-                    </h1>
-                    <p class="text-sm text-ivory/80 max-w-lg mx-auto">
-                      A quiet, curated house devoted to ritual medicine,
-                      longevity, and the nervous system’s return to safety.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              VG
             </div>
-          </div>
-        </section>
+            <span
+              class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
+            >
+              Vitara Gaia Wellness House
+            </span>
+          </a>
 
-        <!-- HOUSE INTRO -->
-        <section class="pb-20">
-          <div class="mx-auto max-w-6xl px-5 space-y-12">
-            <p class="text-lg text-ivory/80 max-w-3xl">
-              Vitara Gaia is a private integrative wellness sanctuary — a living
-              house where modern medicine meets ancient earth, and where the
-              nervous system finally remembers what it means to feel safe. Here,
-              medicine is unhurried, hospitality is sacred, and every detail is
-              wrapped in ritual.
-            </p>
-
-            <!-- WHAT THE HOUSE IS -->
-            <div class="space-y-6">
-              <h2 class="font-display text-2xl">What The House Is</h2>
-              <p class="text-ivory/80 max-w-3xl">
-                The House is a world within a world. Behind its doors, the pace
-                of the city dissolves. Your breath deepens without instruction.
-                Soft lighting, warm air, botanical scent—nothing shouts.
-                Everything whispers.
-              </p>
-
-              <ul class="grid md:grid-cols-2 gap-3 text-sm text-ivory/70">
-                <li>• Traditional Chinese Medicine</li>
-                <li>• Functional diagnostics</li>
-                <li>• Ritualized acupuncture</li>
-                <li>• Bodywork and somatic therapy</li>
-                <li>• Herbal pharmacopeia</li>
-                <li>• Regenerative aesthetics & IV therapy</li>
-                <li>• Seasonal nourishment</li>
-                <li>• Nervous system recalibration</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- COLLAGE -->
-        <section class="mt-10 px-5">
-          <div class="max-w-6xl mx-auto frame bg-white/5">
-            <div class="slideshow-container">
-              <div class="slide active">
-                <img
-                  src="assets/images/the-house/collage-01.jpg"
-                  class="w-full h-full object-cover filtered-img"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="assets/images/the-house/collage-02.jpg"
-                  class="w-full h-full object-cover filtered-img"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="assets/images/the-house/collage-03.jpg"
-                  class="w-full h-full object-cover filtered-img"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="assets/images/the-house/collage-04.jpg"
-                  class="w-full h-full object-cover filtered-img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- INVITATION -->
-        <section class="py-20 px-5">
-          <div class="mx-auto max-w-3xl text-center space-y-6">
-            <h2 class="font-display text-3xl">An Invitation</h2>
-            <p class="text-sm text-ivory/80 leading-relaxed">
-              Vitara Gaia is for those who don’t seek more “services” — but a
-              sanctuary where medicine becomes ritual, and healing becomes
-              architecture. If you feel called to a house built for depth,
-              privacy, and transformation, you may request a private
-              introduction.
-            </p>
-
+          <!-- Desktop Nav -->
+          <nav
+            class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
+          >
+            <a href="the-house.html" class="text-ivory hover:text-ivory"
+              >The House</a
+            >
+            <a href="method.html" class="text-ivory/60 hover:text-ivory"
+              >Method</a
+            >
+            <a href="membership.html" class="text-ivory/60 hover:text-ivory"
+              >Membership</a
+            >
+            <a href="house-rituals.html" class="text-ivory/60 hover:text-ivory"
+              >House Rituals</a
+            >
+            <a href="culinary-salon.html" class="text-ivory/60 hover:text-ivory"
+              >Culinary Salon</a
+            >
+            <a href="journal.html" class="text-ivory/60 hover:text-ivory"
+              >Journal</a
+            >
             <a
               href="private-inquiry.html"
-              class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+              class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition"
             >
-              Request an Introduction to The House
+              Private Inquiry
             </a>
-          </div>
-        </section>
-      </main>
+          </nav>
 
-      <!-- FOOTER -->
-      <footer class="border-t border-white/5 mt-16">
+          <!-- Mobile Button -->
+          <button
+            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
+          >
+            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+            <span class="block h-[1px] w-4 bg-ivory"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- ================= END NAVBAR ================= -->
+
+    <main class="pt-20">
+      <!-- ================= HERO ================= -->
+      <section class="relative h-[85vh] w-full overflow-hidden">
+        <img
+          src="assets/images/house/collage/collage-10.jpg"
+          class="absolute inset-0 w-full h-full object-cover filtered-img opacity-80"
+        />
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
         <div
-          class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+          class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
         >
-          <p class="text-xs text-ivory/50">
-            © <span id="year"></span> Vitara Gaia Wellness House
+          <h1 class="font-display text-5xl md:text-6xl mb-4">
+            Welcome to The House
+          </h1>
+          <p class="max-w-2xl text-lg md:text-xl text-ivory/80">
+            A private integrative wellness sanctuary where ancient ritual meets
+            modern medicine, and where the nervous system remembers what it
+            means to feel safe.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== SECTION 1: WHAT THE HOUSE IS =============== -->
+      <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <h2 class="font-display text-4xl">
+            A Private Integrative Wellness Sanctuary
+          </h2>
+
+          <p class="text-lg text-ivory/80 leading-relaxed">
+            Vitara Gaia is a private integrative wellness sanctuary — a quiet,
+            curated house of ritual medicine hidden in New York City.
+            <br /><br />
+            <strong>Not a clinic. Not a spa. Not a wellness trend.</strong
+            ><br />
+            A house — a living hub for healing, refinement, and transformation.
           </p>
 
-          <div
-            class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
-          >
-            <a href="membership.html" class="hover:text-ivory">Membership</a>
-            <a href="private-inquiry.html" class="hover:text-ivory"
-              >Request Access</a
-            >
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            A place where modern medicine meets ancient earth… and where the
+            nervous system finally remembers what it means to feel safe. Here,
+            medicine is unhurried, hospitality is sacred, and every detail is
+            wrapped in ritual.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== COLLAGE / CINEMATIC SLIDESHOW =============== -->
+      <section class="px-6">
+        <div
+          class="max-w-5xl mx-auto rounded-2xl overflow-hidden border border-white/10"
+        >
+          <div class="relative w-full h-[380px]">
+            <!-- SLIDES -->
+            <div class="slide active">
+              <img
+                src="assets/images/house/collage/collage-01.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-02.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-03.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-04.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-05.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-06.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-07.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-08.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-09.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="assets/images/house/collage/collage-10.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <!-- =============== SECTION: HOW THE HOUSE WORKS =============== -->
+      <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <h2 class="font-display text-4xl">How The House Works</h2>
+
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            A visit to Vitara Gaia unfolds like a story. You cross the threshold
+            and are met with a welcome ritual — a warm towel, a quiet greeting,
+            a herbal infusion crafted for your current state.
+          </p>
+
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            Your intake is a conversation, not an interrogation. We read your
+            pulse, your tongue, your sleep patterns, your stress cycles, your
+            emotional rhythms.
+          </p>
+
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            Your treatment becomes an orchestration of ritual medicine:
+          </p>
+
+          <ul class="list-disc ml-6 text-lg text-ivory/70 space-y-2">
+            <li>Acupuncture or electro-acupuncture</li>
+            <li>Cupping, gua sha, somatic bodywork</li>
+            <li>Ozone, peptides, IV therapy</li>
+            <li>Skinwork, regenerative aesthetics</li>
+            <li>Breathwork, sound, and nervous-system rituals</li>
+            <li>Herbal infusions, teas, tinctures</li>
+            <li>Programs for rest, detox, clarity, renewal</li>
+          </ul>
+
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            Sessions do not begin and end — they unfold.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== SECTION: WHO THE HOUSE IS FOR =============== -->
+      <section class="py-24 px-6 bg-white/5">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <h2 class="font-display text-4xl">Who The House Is For</h2>
+
+          <p class="text-lg text-ivory/80 leading-relaxed">
+            The House is for those who feel they have outgrown rushed
+            appointments, fragmented care, cold spaces, or trend-driven
+            wellness.
+          </p>
+
+          <ul class="list-disc ml-6 text-lg text-ivory/70 space-y-2">
+            <li>A long-term home base for their health</li>
+            <li>Extended, layered sessions with true depth</li>
+            <li>A private team who knows their constitution</li>
+            <li>
+              Rituals for longevity, clarity, hormones, fertility, rehab, sleep,
+              and emotional release
+            </li>
+            <li>A sanctuary, not a service</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============== SECTION: BELONGING TO THE HOUSE =============== -->
+      <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <h2 class="font-display text-4xl">Belonging to The House</h2>
+
+          <p class="text-lg text-ivory/75 leading-relaxed">
+            Membership at Vitara Gaia is intentionally limited — an ongoing
+            relationship, not a subscription.
+          </p>
+
+          <ul class="list-disc ml-6 text-lg text-ivory/70 space-y-2">
+            <li>Priority access to extended medical + ritual sessions</li>
+            <li>24-hour access to practitioner or concierge support</li>
+            <li>Care plans that evolve with your seasons</li>
+            <li>Private herbal prescriptions delivered or prepared in-house</li>
+            <li>Nervous-system support between sessions</li>
+            <li>Invitation privileges for select guests</li>
+            <li>Retreats, medical tourism, and seasonal immersions</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =============== CTA =============== -->
+      <section class="text-center py-24">
+        <a
+          href="private-inquiry.html"
+          class="px-10 py-4 bg-champagne text-jade rounded-full text-lg font-semibold tracking-wide hover:bg-champagne/80 transition"
+        >
+          Request an Introduction to The House
+        </a>
+      </section>
+    </main>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Fade Slideshow
-      let index = 0;
+      // slideshow
+      let idx = 0;
       const slides = document.querySelectorAll(".slide");
 
       setInterval(() => {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
+        slides[idx].classList.remove("active");
+        idx = (idx + 1) % slides.length;
+        slides[idx].classList.add("active");
       }, 4000);
     </script>
   </body>
