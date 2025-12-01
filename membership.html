@@ -27,30 +27,25 @@
     </script>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
-
     <style>
       body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: #0f0f0e;
         color: #f4f1ea;
       }
       .font-display {
-        font-family: "Playfair Display", "Times New Roman", serif;
+        font-family: "Playfair Display", serif;
       }
-      .nav-link {
-        @apply text-sm tracking-[0.16em] uppercase;
+      .frame {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 1rem;
+        overflow: hidden;
       }
-
-      /* Global image treatment */
       .filtered-img {
         filter: brightness(0.82) contrast(1.08) saturate(1.12);
       }
@@ -83,39 +78,29 @@
             <nav
               class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
             >
-              <a
-                href="the-house.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="the-house.html" class="text-ivory/60 hover:text-ivory"
                 >The House</a
               >
-              <a
-                href="method.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="method.html" class="text-ivory/60 hover:text-ivory"
                 >Method</a
               >
-              <a
-                href="membership.html"
-                class="nav-link text-ivory hover:text-ivory transition-colors"
-                >Membership</a
-              >
+              <a href="membership.html" class="text-ivory">Membership</a>
               <a
                 href="house-rituals.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                class="text-ivory/60 hover:text-ivory"
                 >House Rituals</a
               >
               <a
                 href="culinary-salon.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                class="text-ivory/60 hover:text-ivory"
                 >Culinary Salon</a
               >
-              <a
-                href="journal.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="journal.html" class="text-ivory/60 hover:text-ivory"
                 >Journal</a
               >
               <a
                 href="private-inquiry.html"
-                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
+                class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
               >
                 Private Inquiry
               </a>
@@ -135,13 +120,11 @@
 
       <!-- MAIN CONTENT -->
       <main class="flex-1 pt-20">
-        <!-- HERO WITH WHITE FRAME -->
-        <section class="pt-10 pb-16">
+        <!-- HERO -->
+        <section class="pt-12 pb-20">
           <div class="mx-auto max-w-7xl px-5">
-            <div
-              class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden"
-            >
-              <div class="relative h-[60vh] w-full">
+            <div class="frame bg-white/5">
+              <div class="relative h-[65vh] w-full">
                 <img
                   src="assets/images/membership/membership-hero.jpg"
                   class="w-full h-full object-cover filtered-img"
@@ -154,16 +137,17 @@
                 >
                   <div class="max-w-2xl space-y-4">
                     <p
-                      class="text-[11px] tracking-[0.22em] uppercase text-ivory/60"
+                      class="text-[11px] tracking-[0.22em] uppercase text-ivory/70"
                     >
                       Membership
                     </p>
                     <h1 class="font-display text-4xl md:text-5xl leading-tight">
-                      Membership at Vitara Gaia Wellness House
+                      A Private Pact With Your Health
                     </h1>
-                    <p class="text-sm text-ivory/80 max-w-md mx-auto">
-                      A private, invitation-only pathway designed for depth,
-                      continuity, and integrative transformation.
+                    <p class="text-sm text-ivory/85 max-w-xl mx-auto">
+                      Membership at Vitara Gaia is an ongoing relationship —
+                      intimate, seasonal, and designed for those seeking depth
+                      rather than transactions.
                     </p>
                   </div>
                 </div>
@@ -172,56 +156,103 @@
           </div>
         </section>
 
-        <!-- MAIN MEMBERSHIP CONTENT -->
+        <!-- INTRO BLOCK -->
         <section class="pb-20">
-          <div class="mx-auto max-w-6xl px-5 space-y-16">
-            <div class="grid md:grid-cols-2 gap-10">
-              <!-- TEXT COLUMN -->
-              <div class="space-y-6 max-w-lg">
-                <div>
-                  <h2 class="font-display text-xl mb-2">
-                    Who the House Is For
-                  </h2>
-                  <ul class="space-y-2 text-sm text-ivory/80">
-                    <li>
-                      • Founders, creatives, and executives seeking sustainable
-                      performance.
-                    </li>
-                    <li>
-                      • Individuals recovering from burnout, injury, or chronic
-                      imbalance.
-                    </li>
-                    <li>
-                      • Members drawn to ritual, privacy, and integrative
-                      medicine.
-                    </li>
-                  </ul>
-                </div>
+          <div
+            class="mx-auto max-w-4xl px-5 space-y-6 text-ivory/80 text-sm leading-relaxed"
+          >
+            <p>
+              Vitara Gaia Membership is not a package, not a punch card, and not
+              a “spa plan.” It is an ongoing relationship with a private
+              integrative wellness house that knows your story, tracks your
+              patterns, and walks with you through each season of your life.
+            </p>
+            <p>
+              Membership is intentionally limited so that every person is
+              treated as a house member, not a customer.
+            </p>
+          </div>
+        </section>
 
-                <div>
-                  <h2 class="font-display text-xl mb-2">
-                    Membership Privileges
-                  </h2>
-                  <ul class="space-y-2 text-sm text-ivory/80">
-                    <li>• Access to House Rituals and Immersive Days.</li>
-                    <li>• Priority scheduling for in-residence sessions.</li>
-                    <li>
-                      • Ongoing integrative oversight (TCM, functional, herbal,
-                      peptide/hormone).
-                    </li>
-                    <li>• Invitations to intimate salon evenings.</li>
-                    <li>• Access to Culinary Medicine experiences.</li>
-                    <li>
-                      • Ability to host an approved guest for certain rituals.
-                    </li>
-                  </ul>
-                </div>
+        <!-- SECTION: WHAT MEMBERSHIP INCLUDES -->
+        <section class="pb-20">
+          <div class="mx-auto max-w-6xl px-5 space-y-20">
+            <!-- 1. CLINICAL & RITUAL CARE -->
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+              <div class="space-y-4 max-w-lg">
+                <h2 class="font-display text-2xl">Clinical & Ritual Care</h2>
+                <ul class="space-y-2 text-sm text-ivory/80 leading-relaxed">
+                  <li>
+                    • Priority access to extended, layered sessions blending
+                    acupuncture, electro-acupuncture, cupping, gua sha,
+                    bodywork, IV therapy, ozone, peptides, skincare rituals, and
+                    nervous system work.
+                  </li>
+                  <li>
+                    • Long-form intakes and reviews rather than rushed
+                    appointments.
+                  </li>
+                  <li>
+                    • Care plans that shift with your seasons: stress cycles,
+                    menstruation, fertility, postpartum, injury recovery,
+                    peri-menopause, burnout, performance windows, and travel.
+                  </li>
+                </ul>
               </div>
 
-              <!-- RIGHT COLUMN: VERTICAL IMAGE -->
-              <div
-                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden flex"
-              >
+              <div class="frame bg-white/5 overflow-hidden">
+                <img
+                  src="assets/images/membership/membership-massage.jpg"
+                  class="w-full h-full object-cover filtered-img"
+                />
+              </div>
+            </div>
+
+            <!-- 2. APOTHECARY -->
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+              <div class="frame bg-white/5 overflow-hidden order-2 md:order-1">
+                <img
+                  src="assets/images/membership/membership-apothecary.jpg"
+                  class="w-full h-full object-cover filtered-img"
+                />
+              </div>
+
+              <div class="space-y-4 max-w-lg order-1 md:order-2">
+                <h2 class="font-display text-2xl">
+                  Apothecary & Nutritional Medicine
+                </h2>
+                <ul class="space-y-2 text-sm text-ivory/80 leading-relaxed">
+                  <li>
+                    • Private herbal and tonic prescriptions, blended for your
+                    constitution.
+                  </li>
+                  <li>• Delivery or pick-up for herbs, tinctures, tonics.</li>
+                  <li>
+                    • Seasonal meals delivered (premade) or ingredient-based
+                    wellness boxes to prepare at home.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3. ACCESS & SUPPORT -->
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+              <div class="space-y-4 max-w-lg">
+                <h2 class="font-display text-2xl">Access & Support</h2>
+                <ul class="space-y-2 text-sm text-ivory/80 leading-relaxed">
+                  <li>• Priority scheduling for sessions and ritual days.</li>
+                  <li>
+                    • 24-hour access to medical and concierge support within
+                    agreed boundaries.
+                  </li>
+                  <li>
+                    • Nervous system–aware support between sessions: check-ins,
+                    adjustments to herbs, ritual guidance.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="frame bg-white/5 overflow-hidden">
                 <img
                   src="assets/images/membership/membership-window.jpg"
                   class="w-full h-full object-cover filtered-img"
@@ -229,56 +260,138 @@
               </div>
             </div>
 
-            <!-- TWO IMAGE CARDS -->
-            <div class="grid md:grid-cols-2 gap-8">
-              <div
-                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden"
-              >
-                <div class="h-72 w-full">
-                  <img
-                    src="assets/images/membership/membership-massage.jpg"
-                    class="w-full h-full object-cover filtered-img"
-                  />
-                </div>
+            <!-- 4. GUESTS & RETREATS -->
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+              <div class="frame bg-white/5 overflow-hidden order-2 md:order-1">
+                <img
+                  src="assets/images/membership/membership-iv.jpg"
+                  class="w-full h-full object-cover filtered-img"
+                />
               </div>
 
-              <div
-                class="border border-white/10 bg-white/5 rounded-2xl overflow-hidden"
-              >
-                <div class="h-72 w-full">
-                  <img
-                    src="assets/images/membership/membership-relaxation.jpg"
-                    class="w-full h-full object-cover filtered-img"
-                  />
-                </div>
+              <div class="space-y-4 max-w-lg order-1 md:order-2">
+                <h2 class="font-display text-2xl">Guests, Travel & Retreats</h2>
+                <ul class="space-y-2 text-sm text-ivory/80 leading-relaxed">
+                  <li>
+                    • Invite select guests into The House for curated rituals.
+                  </li>
+                  <li>
+                    • Access to medical tourism and wellness retreats—local and
+                    international.
+                  </li>
+                  <li>
+                    • Priority access as new Houses or pop-ups open worldwide.
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            <!-- PATHWAY SECTION -->
-            <section
-              class="border border-white/10 rounded-2xl p-6 bg-white/5 space-y-4"
-            >
-              <h2 class="font-display text-xl">Membership Pathway</h2>
-              <ol
-                class="list-decimal list-inside space-y-2 text-sm text-ivory/80"
-              >
-                <li>Submit a private inquiry.</li>
-                <li>Short conversation to align intentions and needs.</li>
-                <li>If aligned, a membership outline is extended.</li>
-                <li>Initiation through a first immersion at the House.</li>
-              </ol>
-            </section>
-
-            <!-- CTA -->
-            <div>
-              <a
-                href="private-inquiry.html"
-                class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
-              >
-                Request Membership Consideration
-              </a>
             </div>
           </div>
+        </section>
+
+        <!-- HOW MEMBERSHIP WORKS -->
+        <section class="py-20 bg-white/5 border-y border-white/10">
+          <div class="mx-auto max-w-5xl px-5 space-y-12">
+            <h2 class="font-display text-3xl text-center">
+              How Membership Works
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-10 text-sm text-ivory/80">
+              <div class="space-y-2">
+                <p class="font-display text-xl">1 — Application</p>
+                <p>
+                  Submit a brief application or request an introduction so we
+                  may understand your needs and intentions.
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <p class="font-display text-xl">2 — Immersion</p>
+                <p>
+                  A deep intake, extended treatment ritual, and an initial
+                  apothecary + nutritional plan.
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <p class="font-display text-xl">3 — Monthly Rhythm</p>
+                <p>
+                  Regular sessions, check-ins, herbal adjustments, and seasonal
+                  recalibrations.
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <p class="font-display text-xl">4 — Evolution</p>
+                <p>
+                  As your life shifts, your membership evolves—deepening your
+                  relationship with The House.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- A MONTH INSIDE THE HOUSE -->
+        <section class="py-20">
+          <div class="mx-auto max-w-4xl px-5 space-y-6">
+            <h2 class="font-display text-3xl text-center">
+              A Month Inside the House
+            </h2>
+
+            <p class="text-sm text-ivory/80 leading-relaxed">
+              In one month, a member might experience:
+            </p>
+
+            <ul class="space-y-3 text-sm text-ivory/80 leading-relaxed">
+              <li>
+                — A 2-hour ritual treatment blending acupuncture, bodywork, and
+                IV therapy tailored to workload and sleep.
+              </li>
+              <li>
+                — A revised herbal formula delivered to their home for
+                digestion, anxiety, or hormonal shifts.
+              </li>
+              <li>
+                — A pre-flight check-in adjusting herbs for jet lag and immune
+                support.
+              </li>
+              <li>
+                — A seasonal group ritual—sound, tea, moxa—with other members.
+              </li>
+              <li>
+                — A quiet session focused on nervous system integration and
+                recalibration.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- BOUNDARIES -->
+        <section class="py-16 bg-white/5 border-y border-white/10">
+          <div class="mx-auto max-w-4xl px-5 space-y-6">
+            <h2 class="font-display text-2xl">Membership Boundaries</h2>
+
+            <ul class="space-y-2 text-sm text-ivory/75 leading-relaxed">
+              <li>• Membership spots are limited to protect intimacy.</li>
+              <li>
+                • We are out-of-network; superbills available when appropriate.
+              </li>
+              <li>
+                • 24-hour access means respectful, not constant, communication.
+              </li>
+              <li>• We are a wellness house, not an emergency facility.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 text-center">
+          <a
+            href="private-inquiry.html"
+            class="inline-flex items-center rounded-full bg-champagne px-10 py-4 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+          >
+            Request Membership Introduction
+          </a>
         </section>
       </main>
 
@@ -294,12 +407,8 @@
           <div
             class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
           >
-            <a href="membership.html" class="hover:text-ivory transition-colors"
-              >Membership</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="hover:text-ivory transition-colors"
+            <a href="membership.html" class="hover:text-ivory">Membership</a>
+            <a href="private-inquiry.html" class="hover:text-ivory"
               >Request Access</a
             >
           </div>
