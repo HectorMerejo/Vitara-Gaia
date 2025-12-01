@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
     <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
 
-    <title>Vitara Gaia House | Home</title>
+    <title>Vitara Gaia Wellness House | House Rituals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Tailwind CDN -->
@@ -18,8 +18,10 @@
               jade: "#0D0D0B",
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
-              earth: "#B8AFA3",
-              shadow: "#3A332E",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
             },
           },
         },
@@ -33,25 +35,34 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
     <style>
       body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
-        background-color: #0f0f0e;
+        background-color: #0d0d0b;
         color: #f4f1ea;
       }
       .font-display {
-        font-family: "Playfair Display", "Times New Roman", serif;
+        font-family: "Playfair Display", serif;
       }
-      .nav-link {
-        @apply text-sm tracking-[0.16em] uppercase;
+      .filtered-img {
+        filter: brightness(0.78) contrast(1.05) saturate(0.85);
+      }
+      .accordion-content {
+        display: none;
+      }
+      .accordion.open .accordion-content {
+        display: block;
+      }
+      .accordion-icon {
+        transition: transform 0.3s ease;
+      }
+      .accordion.open .accordion-icon {
+        transform: rotate(45deg);
       }
     </style>
   </head>
-
-  <body class="bg-jade text-ivory antialiased">
-    <!-- Page Wrapper -->
+  <body class="font-body antialiased">
+    <!-- PAGE WRAPPER -->
     <div class="min-h-screen flex flex-col">
       <!-- NAVBAR -->
       <header
@@ -59,7 +70,6 @@
       >
         <div class="mx-auto max-w-6xl px-5">
           <div class="flex items-center justify-between h-16">
-            <!-- Brand -->
             <a href="index.html" class="flex items-center gap-3">
               <div
                 class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
@@ -68,57 +78,40 @@
               </div>
               <span
                 class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
+                >Vitara Gaia Wellness House</span
               >
-                Vitara Gaia House
-              </span>
             </a>
 
-            <!-- Desktop Nav -->
             <nav
               class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
             >
-              <a
-                href="the-house.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="the-house.html" class="text-ivory/60 hover:text-ivory"
                 >The House</a
               >
-              <a
-                href="method.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="method.html" class="text-ivory/60 hover:text-ivory"
                 >Method</a
               >
-              <a
-                href="membership.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="membership.html" class="text-ivory/60 hover:text-ivory"
                 >Membership</a
               >
-              <a
-                href="house-rituals.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >House Rituals</a
-              >
+              <a href="house-rituals.html" class="text-ivory">House Rituals</a>
               <a
                 href="culinary-salon.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+                class="text-ivory/60 hover:text-ivory"
                 >Culinary Salon</a
               >
-              <a
-                href="journal.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              <a href="journal.html" class="text-ivory/60 hover:text-ivory"
                 >Journal</a
               >
               <a
                 href="private-inquiry.html"
-                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
+                class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade"
+                >Private Inquiry</a
               >
-                Private Inquiry
-              </a>
             </nav>
 
-            <!-- Mobile burger (non-functional placeholder; you can wire JS later if needed) -->
             <button
               class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-              aria-label="Open navigation"
             >
               <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
               <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
@@ -128,181 +121,398 @@
         </div>
       </header>
 
-      <!-- MAIN CONTENT -->
+      <!-- ==================== HERO ==================== -->
       <main class="flex-1 pt-16">
-        <section class="py-20">
-          <div class="mx-auto max-w-6xl px-5 space-y-10">
-            <header class="space-y-4 max-w-3xl">
-              <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
-                House Rituals
-              </p>
-              <h1 class="font-display text-3xl md:text-4xl">
-                Rituals reserved for Vitara Gaia members and their invited
-                guests.
-              </h1>
-              <p class="text-sm text-ivory/75">
-                Each House Ritual is tailored to the member’s constitution, the
-                season, and their current state of body, skin, and nervous
-                system.
-              </p>
-            </header>
+        <section class="relative h-[90vh] w-full overflow-hidden bg-black">
+          <video
+            class="absolute inset-0 h-full w-full object-cover opacity-70"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="assets/video/hero-elixir.mp4" type="video/mp4" />
+          </video>
 
-            <div class="grid gap-8 md:grid-cols-2">
-              <!-- One-Hour -->
-              <article
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
-                  <img
-                    src="assets/images/rituals/ritual-gua-sha-gold.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h2 class="font-display text-xl mb-2">
-                    One-Hour House Rituals
-                  </h2>
-                  <p class="text-sm text-ivory/80 mb-2">
-                    The Hour of Reset offers focused integrative sessions to
-                    realign qi, ease tension, and clear the system between
-                    deeper immersions.
-                  </p>
-                  <p class="text-xs text-ivory/60">
-                    Available to House members by private scheduling.
-                  </p>
-                </div>
-              </article>
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black"
+          ></div>
 
-              <!-- Immersive Days -->
-              <article
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
-                  <img
-                    src="assets/images/rituals/ritual-moxa-brass.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h2 class="font-display text-xl mb-2">
-                    Immersive House Days (6 Hours)
-                  </h2>
-                  <p class="text-sm text-ivory/80 mb-2">
-                    Detox & Rebirth is a full-day in-residence experience
-                    weaving bodywork, hydro and thermal therapies, and culinary
-                    medicine into one elemental reset.
-                  </p>
-                  <p class="text-xs text-ivory/60">
-                    Available to House members by private scheduling.
-                  </p>
-                </div>
-              </article>
-
-              <!-- Rehab -->
-              <article
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
-                  <img
-                    src="assets/images/rituals/ritual-acupuncture-stone.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h2 class="font-display text-xl mb-2">
-                    Rehabilitation Sequences
-                  </h2>
-                  <p class="text-sm text-ivory/80 mb-2">
-                    Series-based integrative rehabilitation supporting pain,
-                    post-operative healing, and complex conditions, coordinated
-                    under the Vitara Gaia Method.
-                  </p>
-                  <p class="text-xs text-ivory/60">
-                    Available to House members by private scheduling.
-                  </p>
-                </div>
-              </article>
-
-              <!-- Advanced Therapies -->
-              <article
-                class="border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-56 w-full dark-overlay">
-                  <img
-                    src="assets/images/rituals/ritual-tea-dark.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h2 class="font-display text-xl mb-2">
-                    IV, Ozone & Advanced Integrative Therapies
-                  </h2>
-                  <p class="text-sm text-ivory/80 mb-2">
-                    Advanced protocols—IV, ozone, peptide support, and
-                    others—are accessed only within an established ritual or
-                    care plan.
-                  </p>
-                  <p class="text-xs text-ivory/60">
-                    Available to House members by private scheduling.
-                  </p>
-                </div>
-              </article>
-
-              <!-- Retreats -->
-              <article
-                class="md:col-span-2 border border-white/8 rounded-2xl bg-white/5 overflow-hidden"
-              >
-                <div class="h-64 w-full dark-overlay">
-                  <img
-                    src="assets/images/rituals/ritual-robe-flatlay.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-                <div class="p-6">
-                  <h2 class="font-display text-xl mb-2">
-                    In-Residence Private Retreats
-                  </h2>
-                  <p class="text-sm text-ivory/80 mb-2">
-                    One to three-day in-residence retreats combining House
-                    Rituals, Culinary Salon experiences, and nervous system
-                    repair for members seeking immersive transformation.
-                  </p>
-                  <p class="text-xs text-ivory/60">
-                    Available to House members by private scheduling.
-                  </p>
-                </div>
-              </article>
-
-              <!-- Extra Bottom Image (Moxa Base) -->
-              <article
-                class="md:col-span-2 border border-white/8 rounded-2xl p-6 bg-white/5"
-              >
-                <!-- Image -->
-                <div class="dark-overlay rounded-lux h-72 mb-4">
-                  <img
-                    src="assets/images/rituals/ritual-moxa-brass.jpg"
-                    class="filtered-img w-full h-full object-cover"
-                  />
-                </div>
-              </article>
-            </div>
-
-            <!-- CTAs -->
-            <div class="flex flex-wrap gap-4 pt-4">
-              <a
-                href="private-inquiry.html"
-                class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
-              >
-                Members: Request This Ritual
-              </a>
-              <a
-                href="membership.html"
-                class="inline-flex items-center rounded-full border border-champagne/70 px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-champagne hover:bg-champagne hover:text-jade transition-colors"
-              >
-                Inquire About Membership
-              </a>
+          <div class="relative z-10 h-full flex items-center">
+            <div class="mx-auto max-w-6xl px-5">
+              <div class="max-w-xl space-y-6">
+                <p
+                  class="text-[11px] tracking-[0.24em] uppercase text-ivory/60"
+                >
+                  House Rituals · Vitara Gaia
+                </p>
+                <h1
+                  class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight"
+                >
+                  Rituals of<br /><span class="text-champagne"
+                    >Reorientation & Renewal.</span
+                  >
+                </h1>
+                <p class="text-sm md:text-base text-ivory/80 max-w-md">
+                  Experiences designed to unwind the system, reorganize your
+                  energy, and return you to yourself.
+                </p>
+              </div>
             </div>
           </div>
+        </section>
+
+        <!-- ==================== INTRO ==================== -->
+        <section class="py-24 px-6">
+          <div class="max-w-5xl mx-auto space-y-8">
+            <h2 class="font-display text-3xl md:text-4xl">The House Ritual</h2>
+
+            <p class="text-lg text-ivory/75 leading-relaxed">
+              The House Ritual is the way the Wellness House says, “You’re home
+              now.” You arrive carrying the weight of your day — shoulders
+              tight, breath high, senses overstimulated. Crossing the threshold
+              feels like stepping off the street into somewhere softer, quieter,
+              curated just for you.
+            </p>
+
+            <p class="text-lg text-ivory/75 leading-relaxed">
+              This ritual unfolds like a slow exhale. You’re met, not processed
+              — greeted like a guest, not a time slot. As your senses
+              recalibrate, the nervous system softens, the mind quiets, and your
+              body remembers it can finally let go.
+            </p>
+
+            <p class="text-lg text-ivory/75 leading-relaxed">
+              By the end, there is a clear before and after. Your face softens,
+              breath deepens, and your body feels like a place you can live in
+              again. This is the standard ritual — not because it is simple, but
+              because it is everything you truly need.
+            </p>
+          </div>
+        </section>
+
+        <!-- ==================== RITUAL ACCORDIONS ==================== -->
+        <section class="px-6 pb-24">
+          <div class="max-w-5xl mx-auto space-y-6">
+            <!-- RITUAL TEMPLATE -->
+            <!-- Repeat this block for each ritual -->
+
+            <!-- 1. ROOT & RHYTHM -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  1. Root & Rhythm TCM Ritual
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  You arrive carrying the quiet weight of your week. The ritual
+                  begins with the Vitara Gaia Four-Pillar assessment: energetic,
+                  functional, emotional, and structural. Needles become
+                  constellations, warmth gathers, gua sha and cupping release
+                  long-held tension, and your system shifts from alert to
+                  at-ease.
+                </p>
+                <p class="mt-4">
+                  After treatment, a prescription broth and small culinary
+                  tasting re-ground the body. A custom herbal formula is
+                  prepared, with a take-home version delivered in the days that
+                  follow. You leave not just treated — but reoriented.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. AXIS & ETHER -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">2. Axis & Ether Ritual</h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  This ritual deepens the Root & Rhythm foundation. Once your
+                  nervous system has shifted from defense into receptivity, an
+                  advanced integrative treatment is added seamlessly into the
+                  arc of the session.
+                </p>
+                <p class="mt-4">
+                  Broth, tasting, and tea anchor the experience. You leave with
+                  less static in your mind, more coherence in your body, and a
+                  quiet internal “yes.”
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. SIGNATURE IMMERSION -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  3. Private Signature Immersion (By Invitation)
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  This is not an appointment — it is a passage. A multi-hour,
+                  in-residence experience combining TCM, bodywork, hydrotherapy,
+                  guided meditation, IV hydration, and culinary ceremony.
+                  Ancient, intimate gestures meet modern regenerative tools.
+                </p>
+                <p class="mt-4">
+                  You emerge softened, lengthened, luminous — as if returning
+                  from somewhere sacred.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. HYDRATION IV -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  4. Hydration & Vitality IV Ritual
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  This ritual feels like a clear river moving through a tired
+                  landscape. As the infusion flows, fog lifts, breath deepens,
+                  and your system gradually brightens without being
+                  overstimulated.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. CELLULAR OPTIMIZATION -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  5. Cellular Optimization Ritual
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  Tailored for high-performance nervous systems. Advanced
+                  therapies refine circulation, metabolism, and cognitive
+                  clarity — not by amping you up, but by tuning the internal
+                  wiring.
+                </p>
+              </div>
+            </div>
+
+            <!-- 6. SKIN ALCHEMY -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">6. Skin Alchemy Ritual</h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  A reverent, sculpting aesthetic ritual that restores harmony
+                  to the face without distortion. You leave looking like
+                  yourself — on a very good day.
+                </p>
+              </div>
+            </div>
+
+            <!-- 7. RECOVERY & GROUNDING -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  7. Recovery & Grounding Body Ritual
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  Built for bodies that carry too much — tension, compression,
+                  overstimulation. Heat, pressure, and bodywork unwind long-held
+                  armor, returning mobility and breath.
+                </p>
+              </div>
+            </div>
+
+            <!-- 8. ATTORNEY RESET -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">8. Attorney Reset Ritual</h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  Designed for legal minds under extreme cognitive load.
+                  Structured calm allows the nervous system to stand down,
+                  restoring clarity, judgment, and breath.
+                </p>
+              </div>
+            </div>
+
+            <!-- 9. BACKSTAGE RITUALS -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  9. Backstage Grounding Ritual (Models)
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  A fast nervous-system reset between chaos and runway. Eyes
+                  soften, jaw releases, breath steadies — presence returns.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  10. Runway Radiance Ritual (Models)
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  A sculpting, awakening pre-show treatment designed to look
+                  flawless under intense lighting.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  11. Pre-Show Ceremonial Prep (Models)
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  A deeper reset that refines movement, calms anxiety, and
+                  produces a grounded, electric presence.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">
+                  12. Post-Show Recovery Ritual (Models)
+                </h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  A ritual that unwinds adrenaline, restores circulation, and
+                  brings the body back from performance mode.
+                </p>
+              </div>
+            </div>
+
+            <!-- 13. WINTER SUN -->
+            <div
+              class="accordion border border-white/10 rounded-xl p-6 bg-white/5"
+            >
+              <button
+                class="w-full flex justify-between items-center text-left"
+              >
+                <h3 class="font-display text-xl">13. Winter Sun Ritual</h3>
+                <span class="accordion-icon text-3xl leading-none">+</span>
+              </button>
+              <div
+                class="accordion-content pt-4 text-ivory/75 text-sm leading-relaxed"
+              >
+                <p>
+                  Designed for dim months when mood, energy, and clarity soften.
+                  Warmth, circulation, and emotional light are restored through
+                  carefully layered therapeutic work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="text-center pb-24">
+          <a
+            href="private-inquiry.html"
+            class="inline-flex items-center rounded-full bg-champagne px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+          >
+            Request This Ritual
+          </a>
         </section>
       </main>
 
@@ -312,18 +522,14 @@
           class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
         >
           <p class="text-xs text-ivory/50">
-            © <span id="year"></span> Vitara Gaia House · Private Integrative
-            Wellness House
+            © <span id="year"></span> Vitara Gaia Wellness House · Private
+            Integrative Wellness House
           </p>
           <div
             class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
           >
-            <a href="membership.html" class="hover:text-ivory transition-colors"
-              >Membership</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="hover:text-ivory transition-colors"
+            <a href="membership.html" class="hover:text-ivory">Membership</a>
+            <a href="private-inquiry.html" class="hover:text-ivory"
               >Request Access</a
             >
           </div>
@@ -333,6 +539,13 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Accordion toggles
+      document.querySelectorAll(".accordion").forEach((acc) => {
+        acc.querySelector("button").addEventListener("click", () => {
+          acc.classList.toggle("open");
+        });
+      });
     </script>
   </body>
 </html>
