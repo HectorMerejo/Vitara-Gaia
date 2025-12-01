@@ -2,13 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
-    <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
-
-    <title>Vitara Gaia House | Home</title>
+    <title>Vitara Gaia Wellness House | The Method</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -18,8 +15,10 @@
               jade: "#0D0D0B",
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
-              earth: "#B8AFA3",
-              shadow: "#3A332E",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
             },
           },
         },
@@ -33,194 +32,254 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
     <style>
       body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
-        background-color: #0f0f0e;
+        background-color: #0d0d0b;
         color: #f4f1ea;
       }
-      .font-display {
-        font-family: "Playfair Display", "Times New Roman", serif;
-      }
-      .nav-link {
-        @apply text-sm tracking-[0.16em] uppercase;
+      .filtered-img {
+        filter: brightness(0.78) contrast(1.05) saturate(0.85);
       }
     </style>
   </head>
 
-  <body class="bg-jade text-ivory antialiased">
-    <!-- Page Wrapper -->
-    <div class="min-h-screen flex flex-col">
-      <!-- NAVBAR -->
-      <header
-        class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
-      >
-        <div class="mx-auto max-w-6xl px-5">
-          <div class="flex items-center justify-between h-16">
-            <!-- Brand -->
-            <a href="index.html" class="flex items-center gap-3">
-              <div
-                class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
-              >
-                VG
-              </div>
-              <span
-                class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
-              >
-                Vitara Gaia House
-              </span>
-            </a>
-
-            <!-- Desktop Nav -->
-            <nav
-              class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
+  <body class="font-body antialiased">
+    <!-- ============================ NAVBAR ============================ -->
+    <header
+      class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
+    >
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="flex items-center justify-between h-16">
+          <!-- Brand -->
+          <a href="index.html" class="flex items-center gap-3">
+            <div
+              class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
             >
-              <a
-                href="the-house.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >The House</a
-              >
-              <a
-                href="method.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >Method</a
-              >
-              <a
-                href="membership.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >Membership</a
-              >
-              <a
-                href="house-rituals.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >House Rituals</a
-              >
-              <a
-                href="culinary-salon.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >Culinary Salon</a
-              >
-              <a
-                href="journal.html"
-                class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-                >Journal</a
-              >
-              <a
-                href="private-inquiry.html"
-                class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
-              >
-                Private Inquiry
-              </a>
-            </nav>
-
-            <!-- Mobile burger (non-functional placeholder; you can wire JS later if needed) -->
-            <button
-              class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-              aria-label="Open navigation"
-            >
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-              <span class="block h-[1px] w-4 bg-ivory"></span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <!-- MAIN CONTENT -->
-      <main class="flex-1 pt-16">
-        <section class="py-20">
-          <div class="mx-auto max-w-6xl px-5 space-y-10">
-            <header class="space-y-4 max-w-3xl">
-              <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
-                The Method
-              </p>
-              <h1 class="font-display text-3xl md:text-4xl">
-                The Vitara Gaia Method is the operating blueprint of the House.
-              </h1>
-              <p class="text-sm text-ivory/75">
-                A synthesis of energetic diagnostics, clinical medicine, and
-                elemental design, the Method guides every ritual and journey.
-              </p>
-            </header>
-
-            <div class="grid gap-8 md:grid-cols-2 text-sm">
-              <div class="space-y-3">
-                <h2 class="font-display text-xl mb-1">
-                  Four-Phase Diagnostic System
-                </h2>
-                <p class="text-ivory/80">
-                  Each member is seen through four lenses: energetic,
-                  functional, emotional, and structural. This mapping informs
-                  the pace and composition of rituals.
-                </p>
-              </div>
-
-              <div class="space-y-3">
-                <h2 class="font-display text-xl mb-1">
-                  Five-Element Healing Framework
-                </h2>
-                <p class="text-ivory/80">
-                  Fire, Earth, Metal, Water, and Wood are used as organizing
-                  principles—allowing treatments and culinary choices to support
-                  your elemental balance.
-                </p>
-              </div>
-
-              <div class="space-y-3">
-                <h2 class="font-display text-xl mb-1">
-                  Scientific Integration
-                </h2>
-                <p class="text-ivory/80">
-                  Evidence-based acupuncture, dermal science, hydro therapies,
-                  and nutraceutical design sit alongside ritual, sound, and
-                  breathwork.
-                </p>
-              </div>
-
-              <div class="space-y-3">
-                <h2 class="font-display text-xl mb-1">
-                  Safety &amp; Governance
-                </h2>
-                <p class="text-ivory/80">
-                  Licensed practice, sterile protocols, informed consent, and
-                  discreet data handling underpin the aesthetic and ritual
-                  aspects of the House.
-                </p>
-              </div>
+              VG
             </div>
-          </div>
-        </section>
-      </main>
+            <span
+              class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
+            >
+              Vitara Gaia Wellness House
+            </span>
+          </a>
 
-      <!-- FOOTER -->
-      <footer class="border-t border-white/5 mt-16">
-        <div
-          class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-        >
-          <p class="text-xs text-ivory/50">
-            © <span id="year"></span> Vitara Gaia House · Private Integrative
-            Wellness House
-          </p>
-          <div
-            class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
+          <!-- Desktop Nav -->
+          <nav
+            class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
           >
-            <a href="membership.html" class="hover:text-ivory transition-colors"
+            <a
+              href="the-house.html"
+              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              >The House</a
+            >
+            <a
+              href="method.html"
+              class="nav-link text-ivory hover:text-ivory transition-colors"
+              >Method</a
+            >
+            <a
+              href="membership.html"
+              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
               >Membership</a
             >
             <a
-              href="private-inquiry.html"
-              class="hover:text-ivory transition-colors"
-              >Request Access</a
+              href="rituals.html"
+              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              >House Rituals</a
             >
+            <a
+              href="culinary-salon.html"
+              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              >Culinary Salon</a
+            >
+            <a
+              href="journal.html"
+              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
+              >Journal</a
+            >
+            <a
+              href="private-inquiry.html"
+              class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
+            >
+              Private Inquiry
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button (you can implement later) -->
+          <button
+            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
+          >
+            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
+            <span class="block h-[1px] w-4 bg-ivory"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================ MAIN ============================ -->
+    <main class="pt-20">
+      <!-- ================= HERO ================= -->
+      <section class="pt-10 pb-16">
+        <div class="mx-auto max-w-7xl px-5">
+          <div
+            class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden"
+          >
+            <div class="relative h-[55vh] w-full">
+              <img
+                src="assets/images/method/method-hero.jpg"
+                class="w-full h-full object-cover filtered-img"
+              />
+
+              <div class="absolute inset-0 bg-black/40"></div>
+
+              <div
+                class="absolute inset-0 flex items-center justify-center px-6 text-center"
+              >
+                <div class="max-w-2xl space-y-4">
+                  <p
+                    class="text-[11px] tracking-[0.22em] uppercase text-ivory/60"
+                  >
+                    The Method
+                  </p>
+                  <h1 class="font-display text-4xl md:text-5xl leading-tight">
+                    The Vitara Gaia Method
+                  </h1>
+                  <p class="text-sm text-ivory/80 max-w-md mx-auto">
+                    Where clinical medicine, ritual, and elemental design merge
+                    into a single healing intelligence.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+      <!-- ================= DESCRIPTION ================= -->
+      <section class="pb-20">
+        <div class="mx-auto max-w-4xl px-5 space-y-8">
+          <p class="text-lg text-ivory/80 leading-relaxed">
+            The Vitara Gaia Method is the internal architecture of the House —
+            the invisible system that choreographs every touchpoint, session,
+            and transformation. It is not a protocol. It is a living blueprint
+            that evolves with you.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FOUR-DIMENSION MAP ================= -->
+      <section class="pb-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-10">
+          <h2 class="font-display text-3xl">
+            A Four-Dimensional Diagnostic Map
+          </h2>
+
+          <!-- Diagram -->
+          <div
+            class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
+          >
+            <img
+              src="assets/images/method/four-map.png"
+              class="w-full h-full object-contain filtered-img"
+            />
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-display text-2xl">1. Energetic</h3>
+              <p class="text-ivory/80">
+                Qi, meridians, pulses, elemental patterns — mapping vitality and
+                stagnation.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-display text-2xl">2. Functional</h3>
+              <p class="text-ivory/80">
+                Sleep cycles, digestion, hormones, inflammation, microbiome
+                trends — bridging classical medicine with modern physiology.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-display text-2xl">3. Emotional</h3>
+              <p class="text-ivory/80">
+                Nervous system tendencies, burnout markers, attachment patterns,
+                grief signatures — shaping pacing and tone.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-display text-2xl">4. Structural</h3>
+              <p class="text-ivory/80">
+                Fascia, posture, breath mechanics, scar patterns — the physical
+                architecture affecting energy flow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FIVE-ELEMENT FRAMEWORK ================= -->
+      <section class="pb-24 px-6 bg-white/5">
+        <div class="max-w-5xl mx-auto space-y-10">
+          <h2 class="font-display text-3xl">
+            The Five-Element Healing Framework
+          </h2>
+
+          <!-- Diagram -->
+          <div
+            class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
+          >
+            <img
+              src="assets/images/method/five-elements.png"
+              class="w-full object-contain filtered-img"
+            />
+          </div>
+
+          <p class="text-lg text-ivory/80 leading-relaxed">
+            Fire • Earth • Metal • Water • Wood form the organizing intelligence
+            of every ritual — determining temperature, pacing, textures, sensory
+            cues, and the tone of your journey.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= ASTRO-MEDICAL ================= -->
+      <section class="pb-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-10">
+          <h2 class="font-display text-3xl">Astro-Medical Integration</h2>
+
+          <!-- Diagram -->
+          <div
+            class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
+          >
+            <img
+              src="assets/images/method/astro-map.png"
+              class="w-full object-contain filtered-img"
+            />
+          </div>
+
+          <p class="text-lg text-ivory/80 leading-relaxed">
+            We integrate cosmological medicine — birth charts, planetary cycles,
+            lunar phases, seasonal qi shifts — to determine the optimal timing
+            and delivery of your treatments.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="text-center py-24">
+        <a
+          href="private-inquiry.html"
+          class="px-10 py-4 bg-champagne text-jade rounded-full text-lg font-semibold tracking-wide hover:bg-champagne/80 transition"
+        >
+          Speak With the House
+        </a>
+      </section>
+    </main>
   </body>
 </html>
