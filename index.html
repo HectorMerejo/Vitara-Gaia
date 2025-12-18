@@ -47,13 +47,13 @@
   </head>
 
   <body class="bg-jade text-ivory antialiased">
+    <!-- NAVBAR LOAD -->
     <div include-html="components/navbar.html"></div>
 
     <!-- PAGE WRAPPER -->
     <div class="min-h-screen flex flex-col">
-      <!-- ===================== MAIN CONTENT ===================== -->
       <main class="flex-1 pt-16">
-        <!-- HERO -->
+        <!-- ================= HERO ================= -->
         <section class="relative h-[90vh] w-full overflow-hidden bg-black">
           <video
             class="absolute inset-0 h-full w-full object-cover opacity-70"
@@ -116,7 +116,7 @@
           </div>
         </section>
 
-        <!-- ===================== ONE-LINE ABOUT ===================== -->
+        <!-- ================= ABOUT ================= -->
         <section class="py-16 md:py-20">
           <div class="mx-auto max-w-4xl px-5 text-center space-y-4">
             <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
@@ -130,7 +130,7 @@
           </div>
         </section>
 
-        <!-- ===================== FEATURED JOURNEYS ===================== -->
+        <!-- ================= FEATURED JOURNEYS ================= -->
         <section class="py-12 border-y border-white/5 bg-jade/60">
           <div class="mx-auto max-w-6xl px-5">
             <div
@@ -164,7 +164,6 @@
                     class="filtered-img w-full h-full object-cover rounded-2xl"
                   />
                 </div>
-
                 <p
                   class="text-[11px] tracking-[0.2em] uppercase text-ivory/50 mb-2"
                 >
@@ -189,7 +188,6 @@
                     class="filtered-img w-full h-full object-cover rounded-2xl"
                   />
                 </div>
-
                 <p
                   class="text-[11px] tracking-[0.2em] uppercase text-ivory/50 mb-2"
                 >
@@ -214,7 +212,6 @@
                     class="filtered-img w-full h-full object-cover rounded-2xl"
                   />
                 </div>
-
                 <p
                   class="text-[11px] tracking-[0.2em] uppercase text-ivory/50 mb-2"
                 >
@@ -232,7 +229,7 @@
           </div>
         </section>
 
-        <!-- ===================== SIGNATURE ELEMENTS ===================== -->
+        <!-- ================= SIGNATURE ELEMENTS ================= -->
         <section class="py-16">
           <div class="mx-auto max-w-6xl px-5">
             <div class="grid gap-10 md:grid-cols-[1.1fr,1.3fr] items-start">
@@ -252,15 +249,14 @@
                   Each member’s care is grounded in diagnostic rigor, elemental
                   mapping, and sensory design. Rituals draw from acupuncture,
                   hydro & thermal therapies, dermal science, and culinary
-                  medicine— always in small numbers, always with presence.
+                  medicine—always in small numbers, always with presence.
                 </p>
 
                 <a
                   href="method.html"
                   class="inline-flex items-center text-[11px] tracking-[0.22em] uppercase text-champagne hover:text-ivory"
                 >
-                  Explore the Method
-                  <span class="ml-2 text-xs">↗</span>
+                  Explore the Method <span class="ml-2 text-xs">↗</span>
                 </a>
               </div>
 
@@ -317,7 +313,7 @@
           </div>
         </section>
 
-        <!-- ===================== FOOTER CTA PREVIEW ===================== -->
+        <!-- ================= FOOTER CTA PREVIEW ================= -->
         <section class="py-14 border-y border-white/5 bg-black/40">
           <div
             class="mx-auto max-w-6xl px-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
@@ -351,7 +347,7 @@
         </section>
       </main>
 
-      <!-- ===================== FOOTER ===================== -->
+      <!-- ================= FOOTER ================= -->
       <footer class="border-t border-white/5 mt-16">
         <div
           class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
@@ -373,28 +369,44 @@
       </footer>
     </div>
 
-    <!-- ===================== JS ===================== -->
+    <!-- ================= HTML INCLUDE ENGINE ================= -->
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const closeMenu = document.getElementById("closeMobileMenu");
-
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.remove("hidden");
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[include-html]").forEach(async (el) => {
+          const file = el.getAttribute("include-html");
+          const res = await fetch(file);
+          if (res.ok) {
+            el.innerHTML = await res.text();
+          }
+        });
       });
+    </script>
 
-      closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
+    <!-- ================= MOBILE MENU SCRIPT ================= -->
+    <script>
+      document.addEventListener("click", () => {
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMobileMenu");
 
-      // Close when tapping backdrop
-      mobileMenu.addEventListener("click", (e) => {
-        if (e.target === mobileMenu) {
+        if (!mobileMenuBtn || !mobileMenu || !closeMenu) return;
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+
+        closeMenu.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
-        }
+        });
+
+        mobileMenu.addEventListener("click", (e) => {
+          if (e.target === mobileMenu) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
       });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
