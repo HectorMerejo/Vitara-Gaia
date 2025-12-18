@@ -47,9 +47,10 @@
       </nav>
 
       <!-- MOBILE MENU BUTTON -->
+
       <button
         id="mobileMenuBtn"
-        class="md:hidden relative z-[10000] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
+        class="md:hidden relative z-[30000] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
       >
         <span class="block h-[2px] w-6 bg-ivory"></span>
         <span class="block h-[2px] w-6 bg-ivory"></span>
@@ -61,11 +62,11 @@
   <!-- MOBILE MENU OVERLAY -->
   <div
     id="mobileMenu"
-    class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[9998] hidden opacity-0 transition-all duration-300"
+    class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[20000] hidden opacity-0 transition-all duration-300"
   >
     <div
       id="mobilePanel"
-      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300"
+      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300 z-[20001]"
     >
       <!-- Close Button -->
       <button
