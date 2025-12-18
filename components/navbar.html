@@ -1,5 +1,5 @@
 <header
-  class="fixed top-0 inset-x-0 z-[9999] border-b border-white/5 bg-jade/85 backdrop-blur-xl"
+  class="fixed top-0 inset-x-0 z-[50000] border-b border-white/5 bg-jade/85 backdrop-blur-xl"
 >
   <div class="mx-auto max-w-6xl px-5">
     <div class="flex items-center justify-between h-16">
@@ -46,11 +46,10 @@
         </a>
       </nav>
 
-      <!-- MOBILE MENU BUTTON -->
-
+      <!-- Mobile Button -->
       <button
         id="mobileMenuBtn"
-        class="md:hidden relative z-[30000] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
+        class="md:hidden relative z-[60000] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
       >
         <span class="block h-[2px] w-6 bg-ivory"></span>
         <span class="block h-[2px] w-6 bg-ivory"></span>
@@ -59,24 +58,22 @@
     </div>
   </div>
 
-  <!-- MOBILE MENU OVERLAY -->
+  <!-- Mobile Overlay -->
   <div
     id="mobileMenu"
-    class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[20000] hidden opacity-0 transition-all duration-300"
+    class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[55000] hidden opacity-0 transition-all duration-300"
   >
     <div
       id="mobilePanel"
-      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300 z-[20001]"
+      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300"
     >
-      <!-- Close Button -->
       <button
         id="closeMobileMenu"
-        class="absolute top-4 right-4 text-ivory text-3xl z-[10001]"
+        class="absolute top-4 right-4 text-ivory text-3xl"
       >
         &times;
       </button>
 
-      <!-- Mobile Nav -->
       <nav
         class="mt-10 flex flex-col space-y-6 text-[12px] tracking-[0.18em] uppercase"
       >
@@ -107,31 +104,3 @@
     </div>
   </div>
 </header>
-
-<!-- MENU SCRIPT -->
-<script>
-  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const mobilePanel = document.getElementById("mobilePanel");
-  const closeMenu = document.getElementById("closeMobileMenu");
-
-  mobileMenuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-    setTimeout(() => {
-      mobileMenu.classList.remove("opacity-0");
-      mobilePanel.classList.remove("translate-x-full");
-    }, 10);
-  });
-
-  closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.add("opacity-0");
-    mobilePanel.classList.add("translate-x-full");
-    setTimeout(() => {
-      mobileMenu.classList.add("hidden");
-    }, 300);
-  });
-
-  mobileMenu.addEventListener("click", (e) => {
-    if (e.target === mobileMenu) closeMenu.click();
-  });
-</script>
