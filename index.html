@@ -183,27 +183,25 @@
         const mobilePanel = document.getElementById("mobilePanel");
         const closeMenu = document.getElementById("closeMobileMenu");
 
-        if (!mobileMenuBtn) return; // Navbar not loaded yet
+        if (!mobileMenuBtn || !mobileMenu) return;
 
-        mobileMenuBtn.addEventListener("click", () => {
+        mobileMenuBtn.onclick = () => {
           mobileMenu.classList.remove("hidden");
-          setTimeout(() => {
+          requestAnimationFrame(() => {
             mobileMenu.classList.remove("opacity-0");
             mobilePanel.classList.remove("translate-x-full");
-          }, 10);
-        });
+          });
+        };
 
-        closeMenu.addEventListener("click", () => {
+        closeMenu.onclick = () => {
           mobileMenu.classList.add("opacity-0");
           mobilePanel.classList.add("translate-x-full");
-          setTimeout(() => {
-            mobileMenu.classList.add("hidden");
-          }, 300);
-        });
+          setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+        };
 
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target === mobileMenu) closeMenu.click();
-        });
+        mobileMenu.onclick = (e) => {
+          if (e.target === mobileMenu) closeMenu.onclick();
+        };
       }
     </script>
 
