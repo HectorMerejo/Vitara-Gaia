@@ -37,6 +37,7 @@
         <a href="journal.html" class="text-ivory/60 hover:text-ivory"
           >Journal</a
         >
+
         <a
           href="private-inquiry.html"
           class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade"
@@ -63,8 +64,8 @@
     class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[9998] hidden opacity-0 transition-all duration-300"
   >
     <div
-      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300"
       id="mobilePanel"
+      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300"
     >
       <!-- Close Button -->
       <button
@@ -105,3 +106,31 @@
     </div>
   </div>
 </header>
+
+<!-- MENU SCRIPT -->
+<script>
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobilePanel = document.getElementById("mobilePanel");
+  const closeMenu = document.getElementById("closeMobileMenu");
+
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    setTimeout(() => {
+      mobileMenu.classList.remove("opacity-0");
+      mobilePanel.classList.remove("translate-x-full");
+    }, 10);
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("opacity-0");
+    mobilePanel.classList.add("translate-x-full");
+    setTimeout(() => {
+      mobileMenu.classList.add("hidden");
+    }, 300);
+  });
+
+  mobileMenu.addEventListener("click", (e) => {
+    if (e.target === mobileMenu) closeMenu.click();
+  });
+</script>
