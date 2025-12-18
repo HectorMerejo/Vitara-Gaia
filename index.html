@@ -44,7 +44,7 @@
 
     <div class="min-h-screen flex flex-col">
       <main class="flex-1 pt-16">
-        <!-- HERO (no z-index values anywhere) -->
+        <!-- HERO -->
         <section class="relative h-[90vh] w-full overflow-hidden bg-black">
           <video
             class="absolute inset-0 h-full w-full object-cover opacity-70"
@@ -106,8 +106,6 @@
             </div>
           </div>
         </section>
-
-        <!-- rest of page stays the same… -->
       </main>
 
       <footer class="border-t border-white/5 mt-16">
@@ -129,28 +127,7 @@
       </footer>
     </div>
 
-    <!-- HTML INCLUDE ENGINE -->
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        const includeElements = document.querySelectorAll("[include-html]");
-
-        for (const el of includeElements) {
-          const file = el.getAttribute("include-html");
-          const res = await fetch(file);
-
-          if (res.ok) {
-            const html = await res.text();
-            el.innerHTML = html;
-
-            // initialize navbar script AFTER injection
-            if (typeof initializeNavbarMenu === "function") {
-              initializeNavbarMenu();
-            }
-          }
-        }
-      });
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <!-- SHARED SCRIPTS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

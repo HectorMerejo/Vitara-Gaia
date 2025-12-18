@@ -106,37 +106,3 @@
     </div>
   </div>
 </header>
-
-<!-- MENU SCRIPT -->
-<script>
-  function initializeNavbarMenu() {
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobilePanel = document.getElementById("mobilePanel");
-    const closeMenu = document.getElementById("closeMobileMenu");
-
-    if (!mobileMenuBtn || !mobileMenu) return;
-
-    mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.remove("hidden");
-      setTimeout(() => {
-        mobileMenu.classList.remove("opacity-0");
-        mobilePanel.classList.remove("translate-x-full");
-      }, 10);
-    });
-
-    closeMenu.addEventListener("click", () => {
-      mobileMenu.classList.add("opacity-0");
-      mobilePanel.classList.add("translate-x-full");
-      setTimeout(() => {
-        mobileMenu.classList.add("hidden");
-      }, 300);
-    });
-
-    mobileMenu.addEventListener("click", (e) => {
-      if (e.target === mobileMenu) closeMenu.click();
-    });
-  }
-
-  initializeNavbarMenu();
-</script>
