@@ -46,15 +46,13 @@
 
   <body class="bg-jade text-ivory antialiased">
     <!-- NAVBAR (loaded dynamically) -->
-    <div include-html="components/navbar.html" class="relative z-[50000]"></div>
+    <div include-html="components/navbar.html"></div>
 
-    <!-- PAGE WRAPPER -->
+    <!-- ================= PAGE WRAPPER ================= -->
     <div class="min-h-screen flex flex-col">
       <main class="flex-1 pt-16">
-        <!-- =============== HERO (fixed z-indexes) =============== -->
-        <section
-          class="relative h-[90vh] w-full overflow-hidden bg-black z-[1]"
-        >
+        <!-- ================= HERO ================= -->
+        <section class="relative h-[90vh] w-full overflow-hidden bg-black z-0">
           <video
             class="absolute inset-0 h-full w-full object-cover opacity-70 z-0"
             autoplay
@@ -81,8 +79,9 @@
                 <h1
                   class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight"
                 >
-                  Ancient Medicine.<br />
-                  <span class="text-champagne">Modern Alchemy.</span>
+                  Ancient Medicine.<br /><span class="text-champagne"
+                    >Modern Alchemy.</span
+                  >
                 </h1>
 
                 <p class="text-sm md:text-base text-ivory/80 max-w-md">
@@ -116,27 +115,10 @@
           </div>
         </section>
 
-        <!-- (rest of your page stays unchanged) -->
-        <!-- ABOUT -->
-        <section class="py-16 md:py-20">
-          <div class="mx-auto max-w-4xl px-5 text-center space-y-4">
-            <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
-              About Vitara Gaia Wellness House
-            </p>
-            <p class="font-display text-2xl md:text-3xl">
-              A members-only integrative wellness house devoted to longevity,
-              detox, and ritual rehabilitation—where medicine is experienced as
-              art, hospitality, and ceremony.
-            </p>
-          </div>
-        </section>
-
-        <!-- FEATURED JOURNEYS -->
-        <!-- (no changes needed) -->
-        …
+        <!-- Your remaining content continues here… -->
       </main>
 
-      <!-- FOOTER STAYS THE SAME -->
+      <!-- FOOTER -->
       <footer class="border-t border-white/5 mt-16">
         <div
           class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
@@ -158,21 +140,18 @@
       </footer>
     </div>
 
-    <!-- HTML INCLUDE ENGINE -->
+    <!-- ================= HTML INCLUDE ENGINE ================= -->
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
-        const includeElements = document.querySelectorAll("[include-html]");
+        const includeTargets = document.querySelectorAll("[include-html]");
 
-        for (const el of includeElements) {
+        for (const el of includeTargets) {
           const file = el.getAttribute("include-html");
           const res = await fetch(file);
 
           if (res.ok) {
-            const html = await res.text();
-            el.innerHTML = html;
-
-            // *** IMPORTANT: Run menu script AFTER injecting navbar ***
-            initializeNavbarMenu();
+            el.innerHTML = await res.text();
+            initializeNavbarMenu(); // RUN MENU SCRIPT AFTER LOAD
           }
         }
       });
