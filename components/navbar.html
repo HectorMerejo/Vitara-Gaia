@@ -1,5 +1,5 @@
 <header
-  class="fixed top-0 inset-x-0 z-[999999] border-b border-white/5 bg-jade/85 backdrop-blur-xl"
+  class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
 >
   <div class="mx-auto max-w-6xl px-5">
     <div class="flex items-center justify-between h-16">
@@ -49,60 +49,58 @@
       <!-- MOBILE MENU BUTTON -->
       <button
         id="mobileMenuBtn"
-        class="md:hidden relative z-[1000000] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
+        class="md:hidden relative z-[100] flex flex-col justify-center items-center gap-1.5 h-10 w-10 rounded-full border border-ivory/20 bg-jade/70 backdrop-blur"
       >
         <span class="block h-[2px] w-6 bg-ivory"></span>
         <span class="block h-[2px] w-6 bg-ivory"></span>
         <span class="block h-[2px] w-6 bg-ivory"></span>
       </button>
-    </div>
-  </div>
-
-  <!-- MOBILE MENU OVERLAY -->
-  <div
-    id="mobileMenu"
-    class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[999998] hidden opacity-0 transition-all duration-300"
-  >
-    <div
-      id="mobilePanel"
-      class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300 z-[999999]"
-    >
-      <!-- Close Button -->
-      <button
-        id="closeMobileMenu"
-        class="absolute top-4 right-4 text-ivory text-3xl z-[1000001]"
-      >
-        &times;
-      </button>
-
-      <!-- Mobile Nav -->
-      <nav
-        class="mt-10 flex flex-col space-y-6 text-[12px] tracking-[0.18em] uppercase"
-      >
-        <a href="the-house.html" class="text-ivory/80 hover:text-ivory"
-          >The House</a
-        >
-        <a href="method.html" class="text-ivory/80 hover:text-ivory">Method</a>
-        <a href="membership.html" class="text-ivory/80 hover:text-ivory"
-          >Membership</a
-        >
-        <a href="house-rituals.html" class="text-ivory/80 hover:text-ivory"
-          >House Rituals</a
-        >
-        <a href="culinary-salon.html" class="text-ivory/80 hover:text-ivory"
-          >Culinary Salon</a
-        >
-        <a href="journal.html" class="text-ivory/80 hover:text-ivory"
-          >Journal</a
-        >
-
-        <a
-          href="private-inquiry.html"
-          class="mt-4 inline-block text-center rounded-full bg-champagne px-4 py-2 text-jade hover:bg-ivory"
-        >
-          Private Inquiry
-        </a>
-      </nav>
     </div>
   </div>
 </header>
+
+<!-- MOBILE MENU OVERLAY - Outside header so it's not constrained -->
+<div
+  id="mobileMenu"
+  class="md:hidden fixed inset-0 bg-black/80 backdrop-blur-xl z-[9999] hidden opacity-0 transition-all duration-300"
+>
+  <div
+    id="mobilePanel"
+    class="absolute top-0 right-0 w-72 h-full bg-jade border-l border-white/10 p-6 overflow-y-auto shadow-xl translate-x-full transition-transform duration-300"
+  >
+    <!-- Close Button -->
+    <button
+      id="closeMobileMenu"
+      class="absolute top-4 right-4 text-ivory text-3xl hover:text-champagne"
+    >
+      &times;
+    </button>
+
+    <!-- Mobile Nav -->
+    <nav
+      class="mt-16 flex flex-col space-y-6 text-[12px] tracking-[0.18em] uppercase"
+    >
+      <a href="the-house.html" class="text-ivory/80 hover:text-ivory"
+        >The House</a
+      >
+      <a href="method.html" class="text-ivory/80 hover:text-ivory">Method</a>
+      <a href="membership.html" class="text-ivory/80 hover:text-ivory"
+        >Membership</a
+      >
+      <a href="house-rituals.html" class="text-ivory/80 hover:text-ivory"
+        >House Rituals</a
+      >
+      <a href="culinary-salon.html" class="text-ivory/80 hover:text-ivory"
+        >Culinary Salon</a
+      >
+      <a href="journal.html" class="text-ivory/80 hover:text-ivory">Journal</a>
+
+      <a
+        href="private-inquiry.html"
+        class="mt-4 inline-block text-center rounded-full bg-champagne px-4 py-2 text-jade hover:bg-ivory"
+      >
+        Private Inquiry
+      </a>
+    </nav>
+  </div>
+</div>
