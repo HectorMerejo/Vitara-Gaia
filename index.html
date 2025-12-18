@@ -381,32 +381,5 @@
         });
       });
     </script>
-
-    <!-- ================= MOBILE MENU SCRIPT ================= -->
-    <script>
-      document.addEventListener("click", () => {
-        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const closeMenu = document.getElementById("closeMobileMenu");
-
-        if (!mobileMenuBtn || !mobileMenu || !closeMenu) return;
-
-        mobileMenuBtn.addEventListener("click", () => {
-          mobileMenu.classList.remove("hidden");
-        });
-
-        closeMenu.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-        });
-
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target === mobileMenu) {
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      });
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
