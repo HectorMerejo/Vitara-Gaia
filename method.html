@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
+    <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
+
     <title>Vitara Gaia Wellness House | The Method</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -16,18 +18,11 @@
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
             },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
           },
         },
       };
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -35,8 +30,10 @@
 
     <style>
       body {
-        background-color: #0d0d0b;
-        color: #f4f1ea;
+        font-family: "Inter", sans-serif;
+      }
+      .font-display {
+        font-family: "Playfair Display", serif;
       }
       .filtered-img {
         filter: brightness(0.78) contrast(1.05) saturate(0.85);
@@ -44,87 +41,14 @@
     </style>
   </head>
 
-  <body class="font-body antialiased">
-    <!-- ============================ NAVBAR ============================ -->
-    <header
-      class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
-    >
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="flex items-center justify-between h-16">
-          <!-- Brand -->
-          <a href="index.html" class="flex items-center gap-3">
-            <div
-              class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
-            >
-              VG
-            </div>
-            <span
-              class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
-            >
-              Vitara Gaia Wellness House
-            </span>
-          </a>
+  <body class="bg-jade text-ivory antialiased">
+    <!-- NAVBAR INCLUDE -->
+    <div include-html="components/navbar.html"></div>
 
-          <!-- Desktop Nav -->
-          <nav
-            class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
-          >
-            <a
-              href="the-house.html"
-              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-              >The House</a
-            >
-            <a
-              href="method.html"
-              class="nav-link text-ivory hover:text-ivory transition-colors"
-              >Method</a
-            >
-            <a
-              href="membership.html"
-              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-              >Membership</a
-            >
-            <a
-              href="rituals.html"
-              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-              >House Rituals</a
-            >
-            <a
-              href="culinary-salon.html"
-              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-              >Culinary Salon</a
-            >
-            <a
-              href="journal.html"
-              class="nav-link text-ivory/60 hover:text-ivory transition-colors"
-              >Journal</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="nav-link text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition-colors"
-            >
-              Private Inquiry
-            </a>
-          </nav>
-
-          <!-- Mobile Menu Button (you can implement later) -->
-          <button
-            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-          >
-            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-            <span class="block h-[1px] w-4 bg-ivory"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- ============================ MAIN ============================ -->
+    <!-- MAIN -->
     <main class="pt-20">
-      <!-- ================= HERO ================= -->
-      <!-- HERO — METHOD PAGE -->
+      <!-- HERO -->
       <section class="relative h-[90vh] w-full overflow-hidden bg-black">
-        <!-- Background Video -->
         <video
           class="absolute inset-0 h-full w-full object-cover opacity-70"
           autoplay
@@ -135,21 +59,17 @@
           <source src="assets/video/hero-elixir.mp4" type="video/mp4" />
         </video>
 
-        <!-- Overlay -->
         <div
           class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black"
         ></div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 h-full flex items-center">
+        <div class="relative h-full flex items-center">
           <div class="mx-auto max-w-6xl px-5">
             <div class="max-w-xl space-y-6">
-              <!-- Subheading -->
               <p class="text-[11px] tracking-[0.24em] uppercase text-ivory/60">
                 The Vitara Gaia Method · A Living Healing Blueprint
               </p>
 
-              <!-- Title -->
               <h1
                 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight"
               >
@@ -157,7 +77,6 @@
                 <span class="text-champagne">Ritual Becomes Healing.</span>
               </h1>
 
-              <!-- Description -->
               <p class="text-sm md:text-base text-ivory/80 max-w-md">
                 A multidimensional system where clinical medicine, elemental
                 design, and sensory intelligence merge into a single healing
@@ -165,18 +84,17 @@
                 touchpoint inside the House.
               </p>
 
-              <!-- CTA Buttons -->
               <div class="flex flex-wrap items-center gap-4 pt-2">
                 <a
                   href="membership.html"
-                  class="inline-flex items-center justify-center rounded-full bg-champagne px-6 py-2.5 text-xs tracking-[0.22em] uppercase text-jade hover:bg-ivory transition-colors"
+                  class="inline-flex items-center justify-center rounded-full bg-champagne px-6 py-2.5 text-xs tracking-[0.22em] uppercase text-jade hover:bg-ivory"
                 >
                   Explore Membership
                 </a>
 
                 <a
                   href="private-inquiry.html"
-                  class="inline-flex items-center justify-center rounded-full border border-champagne/70 px-6 py-2.5 text-[11px] tracking-[0.22em] uppercase text-champagne hover:bg-champagne hover:text-jade transition-colors"
+                  class="inline-flex items-center justify-center rounded-full border border-champagne/70 px-6 py-2.5 text-[11px] tracking-[0.22em] uppercase text-champagne hover:bg-champagne hover:text-jade"
                 >
                   Request an Introduction
                 </a>
@@ -192,8 +110,8 @@
         </div>
       </section>
 
-      <!-- ================= DESCRIPTION ================= -->
-      <section class="pb-20">
+      <!-- DESCRIPTION -->
+      <section class="py-20">
         <div class="mx-auto max-w-4xl px-5 space-y-8">
           <p class="text-lg text-ivory/80 leading-relaxed">
             The Vitara Gaia Method is the internal architecture of the House —
@@ -204,20 +122,20 @@
         </div>
       </section>
 
-      <!-- ================= FOUR-DIMENSION MAP ================= -->
+      <!-- FOUR-DIMENSION MAP -->
       <section class="pb-24 px-6">
         <div class="max-w-5xl mx-auto space-y-10">
           <h2 class="font-display text-3xl">
             A Four-Dimensional Diagnostic Map
           </h2>
 
-          <!-- Diagram -->
           <div
             class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
           >
             <img
               src="assets/images/method/four-map.png"
               class="w-full h-full object-contain filtered-img"
+              alt="Four-Dimensional Diagnostic Map"
             />
           </div>
 
@@ -257,20 +175,20 @@
         </div>
       </section>
 
-      <!-- ================= FIVE-ELEMENT FRAMEWORK ================= -->
-      <section class="pb-24 px-6 bg-white/5">
+      <!-- FIVE-ELEMENT FRAMEWORK -->
+      <section class="py-24 px-6 bg-white/5 border-y border-white/10">
         <div class="max-w-5xl mx-auto space-y-10">
           <h2 class="font-display text-3xl">
             The Five-Element Healing Framework
           </h2>
 
-          <!-- Diagram -->
           <div
             class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
           >
             <img
               src="assets/images/method/five-elements.png"
               class="w-full object-contain filtered-img"
+              alt="Five-Element Framework"
             />
           </div>
 
@@ -282,18 +200,18 @@
         </div>
       </section>
 
-      <!-- ================= ASTRO-MEDICAL ================= -->
-      <section class="pb-24 px-6">
+      <!-- ASTRO-MEDICAL -->
+      <section class="py-24 px-6">
         <div class="max-w-5xl mx-auto space-y-10">
           <h2 class="font-display text-3xl">Astro-Medical Integration</h2>
 
-          <!-- Diagram -->
           <div
             class="rounded-2xl border border-white/10 bg-white/5 overflow-hidden"
           >
             <img
               src="assets/images/method/astro-map.png"
               class="w-full object-contain filtered-img"
+              alt="Astro-Medical Integration"
             />
           </div>
 
@@ -305,15 +223,41 @@
         </div>
       </section>
 
-      <!-- ================= CTA ================= -->
+      <!-- CTA -->
       <section class="text-center py-24">
         <a
           href="private-inquiry.html"
-          class="px-10 py-4 bg-champagne text-jade rounded-full text-lg font-semibold tracking-wide hover:bg-champagne/80 transition"
+          class="inline-flex items-center rounded-full bg-champagne px-10 py-4 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory"
         >
           Speak With the House
         </a>
       </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 mt-16">
+      <div
+        class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+      >
+        <p class="text-xs text-ivory/50">
+          © <span id="year"></span> Vitara Gaia Wellness House
+        </p>
+        <div
+          class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
+        >
+          <a href="membership.html" class="hover:text-ivory">Membership</a>
+          <a href="private-inquiry.html" class="hover:text-ivory"
+            >Request Access</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- SHARED SCRIPTS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

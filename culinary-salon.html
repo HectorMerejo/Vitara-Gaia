@@ -5,10 +5,9 @@
     <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
     <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
 
-    <title>Vitara Gaia Wellness House| Home</title>
+    <title>Vitara Gaia Wellness House | Culinary Salon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -18,34 +17,26 @@
               jade: "#0D0D0B",
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
-              earth: "#B8AFA3",
-              shadow: "#3A332E",
             },
           },
         },
       };
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
     <style>
       body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          sans-serif;
-        background-color: #0f0f0e;
-        color: #f4f1ea;
+        font-family: "Inter", sans-serif;
       }
       .font-display {
-        font-family: "Playfair Display", "Times New Roman", serif;
+        font-family: "Playfair Display", serif;
       }
-      .nav-link {
-        @apply text-sm tracking-[0.16em] uppercase;
+      .filtered-img {
+        filter: brightness(0.78) contrast(1.05) saturate(0.85);
       }
     </style>
   </head>
@@ -56,63 +47,6 @@
 
     <!-- Page Wrapper -->
     <div class="min-h-screen flex flex-col">
-      <!-- NAVBAR -->
-      <header
-        class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
-      >
-        <div class="mx-auto max-w-6xl px-5">
-          <div class="flex items-center justify-between h-16">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3">
-              <div
-                class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
-              >
-                VG
-              </div>
-              <span
-                class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
-              >
-                Vitara Gaia Wellness House
-              </span>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav
-              class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
-            >
-              <a href="the-house.html" class="text-ivory/60 hover:text-ivory"
-                >The House</a
-              >
-              <a href="method.html" class="text-ivory/60 hover:text-ivory"
-                >Method</a
-              >
-              <a href="membership.html" class="text-ivory/60 hover:text-ivory"
-                >Membership</a
-              >
-              <a
-                href="house-rituals.html"
-                class="text-ivory/60 hover:text-ivory"
-                >House Rituals</a
-              >
-              <a
-                href="culinary-salon.html"
-                class="text-ivory/60 hover:text-ivory"
-                >Culinary Salon</a
-              >
-              <a href="journal.html" class="text-ivory/60 hover:text-ivory"
-                >Journal</a
-              >
-              <a
-                href="private-inquiry.html"
-                class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade"
-              >
-                Private Inquiry
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
       <!-- MAIN CONTENT -->
       <main class="flex-1 pt-16">
         <section class="py-20">
@@ -126,7 +60,7 @@
               </h1>
               <p class="text-sm text-ivory/75">
                 The Culinary Salon is where elemental food, tea, and tonics are
-                composed as extensions of each member’s integrative plan.
+                composed as extensions of each member's integrative plan.
               </p>
             </header>
 
@@ -142,7 +76,7 @@
               <div class="space-y-3">
                 <h2 class="font-display text-xl mb-1">Seasonal Ritual Menus</h2>
                 <p class="text-ivory/80">
-                  Menus are crafted individually around each member’s elemental
+                  Menus are crafted individually around each member's elemental
                   balance and integrative goals. Think grounding broths,
                   mineral-rich greens, and adaptogenic infusions.
                 </p>
@@ -160,6 +94,7 @@
             </div>
           </div>
         </section>
+
         <!-- CULINARY SALON GALLERY -->
         <section class="py-16 border-t border-white/5">
           <div class="mx-auto max-w-6xl px-5">
@@ -257,18 +192,13 @@
           class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
         >
           <p class="text-xs text-ivory/50">
-            © <span id="year"></span> Vitara Gaia Wellness House · Private
-            Integrative Wellness House
+            © <span id="year"></span> Vitara Gaia Wellness House
           </p>
           <div
             class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
           >
-            <a href="membership.html" class="hover:text-ivory transition-colors"
-              >Membership</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="hover:text-ivory transition-colors"
+            <a href="membership.html" class="hover:text-ivory">Membership</a>
+            <a href="private-inquiry.html" class="hover:text-ivory"
               >Request Access</a
             >
           </div>
@@ -279,6 +209,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
     <!-- SHARED SCRIPTS -->
     <script src="assets/js/main.js"></script>
   </body>

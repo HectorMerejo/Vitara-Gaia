@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/images/vitara-gaia.png" />
+    <link rel="apple-touch-icon" href="assets/images/vitara-gaia.png" />
+
     <title>Vitara Gaia Wellness House | The House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -16,18 +18,11 @@
               champagne: "#D8C7A2",
               ivory: "#F4F1EA",
             },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
           },
         },
       };
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -35,14 +30,14 @@
 
     <style>
       body {
-        background-color: #0d0d0b;
-        color: #f4f1ea;
+        font-family: "Inter", sans-serif;
       }
-
+      .font-display {
+        font-family: "Playfair Display", serif;
+      }
       .filtered-img {
         filter: brightness(0.78) contrast(1.05) saturate(0.85);
       }
-
       .slide {
         position: absolute;
         inset: 0;
@@ -54,76 +49,18 @@
       }
     </style>
   </head>
-  <body class="font-body antialiased">
-    <!-- ================= NAVBAR (added here) ================= -->
-    <header
-      class="fixed top-0 inset-x-0 z-40 border-b border-white/5 bg-jade/85 backdrop-blur-xl"
-    >
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
-          <a href="index.html" class="flex items-center gap-3">
-            <div
-              class="h-7 w-7 rounded-full border border-champagne/60 flex items-center justify-center text-[10px] tracking-[0.14em] uppercase"
-            >
-              VG
-            </div>
-            <span
-              class="text-xs md:text-sm tracking-[0.22em] uppercase text-ivory/80"
-            >
-              Vitara Gaia Wellness House
-            </span>
-          </a>
 
-          <!-- Desktop Nav -->
-          <nav
-            class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.18em] uppercase"
-          >
-            <a href="the-house.html" class="text-ivory hover:text-ivory"
-              >The House</a
-            >
-            <a href="method.html" class="text-ivory/60 hover:text-ivory"
-              >Method</a
-            >
-            <a href="membership.html" class="text-ivory/60 hover:text-ivory"
-              >Membership</a
-            >
-            <a href="house-rituals.html" class="text-ivory/60 hover:text-ivory"
-              >House Rituals</a
-            >
-            <a href="culinary-salon.html" class="text-ivory/60 hover:text-ivory"
-              >Culinary Salon</a
-            >
-            <a href="journal.html" class="text-ivory/60 hover:text-ivory"
-              >Journal</a
-            >
-            <a
-              href="private-inquiry.html"
-              class="text-champagne border border-champagne/60 px-4 py-2 rounded-full hover:bg-champagne hover:text-jade transition"
-            >
-              Private Inquiry
-            </a>
-          </nav>
-
-          <!-- Mobile Button -->
-          <button
-            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-ivory/20"
-          >
-            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-            <span class="block h-[1px] w-4 bg-ivory mb-[5px]"></span>
-            <span class="block h-[1px] w-4 bg-ivory"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <!-- ================= END NAVBAR ================= -->
+  <body class="bg-jade text-ivory antialiased">
+    <!-- NAVBAR INCLUDE -->
+    <div include-html="components/navbar.html"></div>
 
     <main class="pt-20">
-      <!-- ================= HERO ================= -->
+      <!-- HERO -->
       <section class="relative h-[85vh] w-full overflow-hidden">
         <img
           src="assets/images/house/collage/collage-10.jpg"
           class="absolute inset-0 w-full h-full object-cover filtered-img opacity-80"
+          alt="The House"
         />
 
         <div class="absolute inset-0 bg-black/50"></div>
@@ -142,7 +79,7 @@
         </div>
       </section>
 
-      <!-- =============== SECTION 1: WHAT THE HOUSE IS =============== -->
+      <!-- WHAT THE HOUSE IS -->
       <section class="py-24 px-6">
         <div class="max-w-4xl mx-auto space-y-8">
           <h2 class="font-display text-4xl">
@@ -167,7 +104,7 @@
         </div>
       </section>
 
-      <!-- =============== COLLAGE / CINEMATIC SLIDESHOW =============== -->
+      <!-- COLLAGE / CINEMATIC SLIDESHOW -->
       <section class="px-6">
         <div
           class="max-w-5xl mx-auto rounded-2xl overflow-hidden border border-white/10"
@@ -178,6 +115,7 @@
               <img
                 src="assets/images/house/collage/collage-01.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 1"
               />
             </div>
 
@@ -185,6 +123,7 @@
               <img
                 src="assets/images/house/collage/collage-02.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 2"
               />
             </div>
 
@@ -192,6 +131,7 @@
               <img
                 src="assets/images/house/collage/collage-03.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 3"
               />
             </div>
 
@@ -199,6 +139,7 @@
               <img
                 src="assets/images/house/collage/collage-04.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 4"
               />
             </div>
 
@@ -206,6 +147,7 @@
               <img
                 src="assets/images/house/collage/collage-05.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 5"
               />
             </div>
 
@@ -213,6 +155,7 @@
               <img
                 src="assets/images/house/collage/collage-06.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 6"
               />
             </div>
 
@@ -220,6 +163,7 @@
               <img
                 src="assets/images/house/collage/collage-07.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 7"
               />
             </div>
 
@@ -227,6 +171,7 @@
               <img
                 src="assets/images/house/collage/collage-08.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 8"
               />
             </div>
 
@@ -234,6 +179,7 @@
               <img
                 src="assets/images/house/collage/collage-09.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 9"
               />
             </div>
 
@@ -241,13 +187,14 @@
               <img
                 src="assets/images/house/collage/collage-10.jpg"
                 class="w-full h-full object-cover filtered-img"
+                alt="House Interior 10"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =============== SECTION: HOW THE HOUSE WORKS =============== -->
+      <!-- HOW THE HOUSE WORKS -->
       <section class="py-24 px-6">
         <div class="max-w-4xl mx-auto space-y-8">
           <h2 class="font-display text-4xl">How The House Works</h2>
@@ -284,8 +231,8 @@
         </div>
       </section>
 
-      <!-- =============== SECTION: WHO THE HOUSE IS FOR =============== -->
-      <section class="py-24 px-6 bg-white/5">
+      <!-- WHO THE HOUSE IS FOR -->
+      <section class="py-24 px-6 bg-white/5 border-y border-white/10">
         <div class="max-w-4xl mx-auto space-y-8">
           <h2 class="font-display text-4xl">Who The House Is For</h2>
 
@@ -308,7 +255,7 @@
         </div>
       </section>
 
-      <!-- =============== SECTION: BELONGING TO THE HOUSE =============== -->
+      <!-- BELONGING TO THE HOUSE -->
       <section class="py-24 px-6">
         <div class="max-w-4xl mx-auto space-y-8">
           <h2 class="font-display text-4xl">Belonging to The House</h2>
@@ -330,19 +277,40 @@
         </div>
       </section>
 
-      <!-- =============== CTA =============== -->
+      <!-- CTA -->
       <section class="text-center py-24">
         <a
           href="private-inquiry.html"
-          class="px-10 py-4 bg-champagne text-jade rounded-full text-lg font-semibold tracking-wide hover:bg-champagne/80 transition"
+          class="inline-flex items-center rounded-full bg-champagne px-10 py-4 text-[11px] tracking-[0.22em] uppercase text-jade hover:bg-ivory"
         >
           Request an Introduction to The House
         </a>
       </section>
     </main>
 
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 mt-16">
+      <div
+        class="mx-auto max-w-6xl px-5 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+      >
+        <p class="text-xs text-ivory/50">
+          © <span id="year"></span> Vitara Gaia Wellness House
+        </p>
+        <div
+          class="flex gap-6 text-[11px] tracking-[0.16em] uppercase text-ivory/50"
+        >
+          <a href="membership.html" class="hover:text-ivory">Membership</a>
+          <a href="private-inquiry.html" class="hover:text-ivory"
+            >Request Access</a
+          >
+        </div>
+      </div>
+    </footer>
+
     <script>
-      // slideshow
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Slideshow
       let idx = 0;
       const slides = document.querySelectorAll(".slide");
 
@@ -352,5 +320,8 @@
         slides[idx].classList.add("active");
       }, 4000);
     </script>
+
+    <!-- SHARED SCRIPTS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
