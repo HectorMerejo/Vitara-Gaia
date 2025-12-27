@@ -35,6 +35,12 @@
       .font-display {
         font-family: "Playfair Display", serif;
       }
+      .success-message {
+        display: none;
+      }
+      .success-message.show {
+        display: block;
+      }
     </style>
   </head>
 
@@ -62,7 +68,22 @@
               </p>
             </header>
 
-            <form class="space-y-5">
+            <!-- Success Message -->
+            <div
+              id="successMessage"
+              class="success-message rounded-2xl border border-champagne/40 bg-champagne/10 p-6 text-center"
+            >
+              <p class="text-champagne text-sm">
+                Thank you for your inquiry. We will be in touch soon.
+              </p>
+            </div>
+
+            <form
+              id="inquiryForm"
+              action="https://formspree.io/f/mgoeywnl"
+              method="POST"
+              class="space-y-5"
+            >
               <div>
                 <label
                   class="block text-xs tracking-[0.18em] uppercase text-ivory/60 mb-1"
@@ -70,6 +91,8 @@
                 >
                 <input
                   type="text"
+                  name="name"
+                  required
                   class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
                   placeholder="Your full name"
                 />
@@ -82,6 +105,8 @@
                 >
                 <input
                   type="email"
+                  name="email"
+                  required
                   class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
                   placeholder="you@example.com"
                 />
@@ -94,6 +119,7 @@
                 >
                 <input
                   type="tel"
+                  name="phone"
                   class="w-full rounded-full border border-white/15 bg-black/40 px-4 py-2.5 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
                   placeholder="+1 ..."
                 />
@@ -107,6 +133,8 @@
                 </label>
                 <textarea
                   rows="5"
+                  name="message"
+                  required
                   class="w-full rounded-3xl border border-white/15 bg-black/40 px-4 py-3 text-sm text-ivory placeholder:text-ivory/30 focus:outline-none focus:border-champagne/80"
                   placeholder="Share anything you wish about your intentions, needs, or timing."
                 ></textarea>
@@ -115,7 +143,9 @@
               <div class="flex items-center gap-2 text-xs text-ivory/70">
                 <input
                   type="checkbox"
+                  name="membership_request"
                   id="membership"
+                  value="yes"
                   class="h-3 w-3 rounded border-white/40 bg-black/40"
                 />
                 <label for="membership"
@@ -161,6 +191,19 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Form submission handler
+      const form = document.getElementById("inquiryForm");
+      const successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", function (e) {
+        // Let Formspree handle the submission
+        // After submission, show success message
+        setTimeout(() => {
+          successMessage.classList.add("show");
+          form.style.display = "none";
+        }, 1000);
+      });
     </script>
 
     <!-- SHARED SCRIPTS -->
