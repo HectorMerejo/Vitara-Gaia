@@ -45,26 +45,73 @@
     <div class="min-h-screen flex flex-col">
       <!-- MAIN CONTENT -->
       <main class="flex-1 pt-16">
-        <!-- HERO SECTION -->
-        <section class="py-20 px-6">
-          <div class="mx-auto max-w-5xl">
-            <div class="space-y-4 max-w-3xl">
-              <p class="text-[11px] tracking-[0.22em] uppercase text-ivory/50">
-                House Events
-              </p>
-              <h1 class="font-display text-4xl md:text-5xl">
-                Seasonal Gatherings & Private Rituals
-              </h1>
-              <p class="text-sm md:text-base text-ivory/75">
-                Intimate wellness experiences designed for groups,
-                collaborations, and seasonal ceremonies at Vitara Gaia House.
-              </p>
+        <!-- HERO SECTION WITH IMAGE HEADER -->
+        <section class="relative">
+          <!-- Image Grid Header -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+            <div class="relative h-[300px] md:h-[400px] overflow-hidden">
+              <img
+                src="assets/images/events/header/image1.jpg"
+                class="w-full h-full object-cover"
+                alt="Event Image 1"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+              ></div>
+            </div>
+            <div class="relative h-[300px] md:h-[400px] overflow-hidden">
+              <img
+                src="assets/images/events/header/image2.jpg"
+                class="w-full h-full object-cover"
+                alt="Event Image 2"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+              ></div>
+            </div>
+            <div class="relative h-[300px] md:h-[400px] overflow-hidden">
+              <img
+                src="assets/images/events/header/image3.jpg"
+                class="w-full h-full object-cover"
+                alt="Event Image 3"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Hero Text Overlay -->
+          <div class="absolute inset-0 flex items-end pb-12 md:pb-16">
+            <div class="mx-auto max-w-5xl px-6 w-full">
+              <div class="space-y-4 max-w-3xl">
+                <p
+                  class="text-[11px] tracking-[0.22em] uppercase text-ivory/90"
+                >
+                  House Events
+                </p>
+                <h1 class="font-display text-4xl md:text-5xl text-ivory">
+                  Seasonal Gatherings & Private Rituals
+                </h1>
+                <p class="text-sm md:text-base text-ivory/85">
+                  Intimate wellness experiences designed for groups,
+                  collaborations, and seasonal ceremonies at Vitara Gaia House.
+                </p>
+                <div class="pt-4">
+                  <a
+                    href="#upcoming-events"
+                    class="inline-flex items-center text-[11px] tracking-[0.22em] uppercase text-champagne hover:text-ivory border-b border-champagne/60 hover:border-ivory pb-1"
+                  >
+                    View Upcoming Events →
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- COMPLETED EVENTS SECTION -->
-        <section class="pb-12 px-6">
+        <section class="py-20 px-6">
           <div class="mx-auto max-w-5xl">
             <h2 class="font-display text-2xl mb-8 text-ivory/80">
               Completed Events
@@ -74,35 +121,6 @@
               <article
                 class="border border-white/10 rounded-2xl overflow-hidden bg-white/5"
               >
-                <!-- Event Image Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
-                  <!-- <img
-                    src="assets/images/events/apm/image1-1.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="APM Event 1"
-                  />
-                  <img
-                    src="assets/images/events/apm/image1-2.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="APM Event 2"
-                  />
-                  <img
-                    src="assets/images/events/apm/image1-3.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="APM Event 3"
-                  />
-                  <img
-                    src="assets/images/events/apm/image1-4.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="APM Event 4"
-                  /> -->
-                  <img
-                    src="assets/images/events/apm/image1-5.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="APM Event 5"
-                  />
-                </div>
-
                 <!-- Event Content -->
                 <div class="p-8 space-y-6">
                   <div class="flex items-start justify-between gap-4 flex-wrap">
@@ -209,39 +227,6 @@
               <article
                 class="border border-white/10 rounded-2xl overflow-hidden bg-white/5"
               >
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-0">
-                  <!-- <img
-                    src="assets/images/events/fashion-week/image2-1.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 1"
-                  />
-                  <img
-                    src="assets/images/events/fashion-week/image2-2.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 2"
-                  />
-                  <img
-                    src="assets/images/events/fashion-week/image2-3.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 3"
-                  />
-                  <img
-                    src="assets/images/events/fashion-week/image2-4.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 4"
-                  />
-                  <img
-                    src="assets/images/events/fashion-week/image2-5.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 5"
-                  /> -->
-                  <img
-                    src="assets/images/events/fashion-week/image2-6.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Fashion Week 6"
-                  />
-                </div>
-
                 <div class="p-8 space-y-6">
                   <div class="flex items-start justify-between gap-4 flex-wrap">
                     <div class="space-y-2">
@@ -332,24 +317,6 @@
               <article
                 class="border border-white/10 rounded-2xl overflow-hidden bg-white/5"
               >
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-0">
-                  <!-- <img
-                    src="assets/images/events/yacht-club/image3-1.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Yacht Club 1"
-                  />
-                  <img
-                    src="assets/images/events/yacht-club/image3-2.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Yacht Club 2"
-                  /> -->
-                  <img
-                    src="assets/images/events/yacht-club/image3-3.jpg"
-                    class="w-full h-48 object-cover"
-                    alt="Yacht Club 3"
-                  />
-                </div>
-
                 <div class="p-8 space-y-6">
                   <div class="flex items-start justify-between gap-4 flex-wrap">
                     <div class="space-y-2">
@@ -447,7 +414,10 @@
         </section>
 
         <!-- UPCOMING EVENTS SECTION -->
-        <section class="py-20 px-6 bg-white/5 border-y border-white/10">
+        <section
+          id="upcoming-events"
+          class="py-20 px-6 bg-white/5 border-y border-white/10"
+        >
           <div class="mx-auto max-w-5xl">
             <h2 class="font-display text-2xl mb-8 text-ivory/80">
               Upcoming Events
