@@ -127,3 +127,11 @@ body {
 .filtered-img {
   filter: brightness(0.72) contrast(1.05) saturate(0.85);
 }
+
+/* FORCE CENTER PRIVATE INQUIRY BUTTON */
+a[href="private-inquiry.html"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
