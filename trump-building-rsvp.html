@@ -41,13 +41,21 @@
       .success-message.show {
         display: block;
       }
+      /* Radio button styling */
       input[type="radio"]:checked + label {
         border-color: #d8c7a2;
         background-color: rgba(216, 199, 162, 0.1);
       }
+      input[type="radio"]:checked + label .radio-dot {
+        opacity: 1;
+      }
+      /* Checkbox styling */
       input[type="checkbox"]:checked + label {
         border-color: #d8c7a2;
         background-color: rgba(216, 199, 162, 0.1);
+      }
+      input[type="checkbox"]:checked + label .checkbox-tick {
+        opacity: 1;
       }
     </style>
   </head>
@@ -279,7 +287,7 @@
             <div class="mb-8 text-center">
               <h2 class="font-display text-3xl mb-4">Request Reservation</h2>
               <p class="text-sm text-ivory/75">
-                Submitting an RSVP does not constitute a booking or obligation,
+                Submitting an RSVP does not constitute a booking or obligation —
                 it simply allows us to assess interest and finalize January
                 programming.
               </p>
@@ -303,7 +311,7 @@
             <!-- Form -->
             <form
               id="rsvpForm"
-              action="https://formspree.io/f/meeqyjqn"
+              action="https://formspree.io/f/mgoeywnl"
               method="POST"
               class="space-y-10"
             >
@@ -419,7 +427,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white/40 peer-checked:border-champagne mt-0.5"
                         >
                           <div
-                            class="h-2.5 w-2.5 rounded-full bg-champagne opacity-0 peer-checked:opacity-100"
+                            class="radio-dot h-2.5 w-2.5 rounded-full bg-champagne opacity-0"
                           ></div>
                         </div>
                         <div class="flex-1">
@@ -449,7 +457,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white/40 peer-checked:border-champagne mt-0.5"
                         >
                           <div
-                            class="h-2.5 w-2.5 rounded-full bg-champagne opacity-0 peer-checked:opacity-100"
+                            class="radio-dot h-2.5 w-2.5 rounded-full bg-champagne opacity-0"
                           ></div>
                         </div>
                         <div class="flex-1">
@@ -479,7 +487,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white/40 peer-checked:border-champagne mt-0.5"
                         >
                           <div
-                            class="h-2.5 w-2.5 rounded-full bg-champagne opacity-0 peer-checked:opacity-100"
+                            class="radio-dot h-2.5 w-2.5 rounded-full bg-champagne opacity-0"
                           ></div>
                         </div>
                         <div class="flex-1">
@@ -531,7 +539,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -564,7 +572,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -599,7 +607,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -632,7 +640,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -686,7 +694,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne mt-0.5"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -723,7 +731,7 @@
                           class="flex h-5 w-5 items-center justify-center rounded border-2 border-white/40 peer-checked:border-champagne mt-0.5"
                         >
                           <svg
-                            class="h-3 w-3 text-champagne opacity-0 peer-checked:opacity-100"
+                            class="checkbox-tick h-3 w-3 text-champagne opacity-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
